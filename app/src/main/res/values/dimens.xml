@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">32px</dimen>
+    <dimen name="activity_vertical_margin">32px</dimen>
+
+
+    <dimen name="title_text_size">20sp</dimen>
+    <dimen name="bottom_menu_text_size">12sp</dimen>
+    <dimen name="list_live_name_size">13sp</dimen>
+    <dimen name="list_live_title_size">13sp</dimen>
+    <dimen name="list_live_more_size">12sp</dimen>
+
+    <!--主界面底部图标大小-->
+    <dimen name="main_bottom_iv_horizontal_size">58px</dimen>
+    <dimen name="main_bottom_iv_vertical_size">54px</dimen>
+
+    <!--列表item间距-->
+    <dimen name="item_margin_left_and_right">25px</dimen>
+    <dimen name="item_margin_top_and_bottom">15px</dimen>
+
+    <!--选项间距-->
+    <dimen name="option_item_margin_top">42px</dimen>
+    <dimen name="option_item_margin_left">40px</dimen>
+    <dimen name="option_item_margin_right">40px</dimen>
+
+
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_b">15dp</dimen>
+    <dimen name="margin">12dp</dimen>
+    <dimen name="small">4dp</dimen>
+    <!-- Padding -->
+    <dimen name="padding_s">4dp</dimen>
+    <dimen name="padding_m">6dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="padding_l">10dp</dimen>
+
+    <dimen name="font_b">24sp</dimen>
+    <dimen name="title_b">22sp</dimen>
+    <dimen name="title">20sp</dimen>
+    <dimen name="title_s">18sp</dimen>
+    <dimen name="content_b">16sp</dimen>
+    <dimen name="content">14sp</dimen>
+    <dimen name="content_s">12sp</dimen>
+    <dimen name="font_s">10sp</dimen>
+
+
+
+
+</resources>
