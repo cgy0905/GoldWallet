@@ -1,11 +1,22 @@
 package com.enternityfintech.goldcard.api;
 
+import com.enternityfintech.goldcard.model.response.LoginResponse;
+
+import okhttp3.RequestBody;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
+import rx.Observable;
+
 /**
  * Created by cgy
  * 2018/5/25  10:53
  */
 public interface MyApi {
     public static final String BASE_URL = "http://api.sealtalk.im/";
+
+    //登录
+    @POST("user/login")
+    Observable<LoginResponse> login(@Body RequestBody body);
 
 //    //检查手机是否被注册
 //    @POST("user/check_phone_available")

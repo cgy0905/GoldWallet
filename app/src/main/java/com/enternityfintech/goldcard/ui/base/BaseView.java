@@ -8,7 +8,7 @@ public interface BaseView {
 
     void showProgress();
 
-    void onCompleted();
+    void hideProgress();
 
-    void onError(Throwable e);
+    void showMsg(String msg);
 }

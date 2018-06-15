@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:widget="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRegister"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_border_color_black">
+
+        <ImageView
+            android:id="@+id/ivPhone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/iconmobile"/>
+
+        <com.enternityfintech.goldcard.widget.EditTextWithDel
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivPhone"
+            android:textColorHint="@color/white"
+            android:hint="请输入您的手机号"
+            android:textSize="13sp"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlVerifyCode"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_border_color_black">
+
+            <ImageView
+                android:id="@+id/ivCode"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/keyicon"/>
+            <com.enternityfintech.goldcard.widget.EditTextWithDel
+                android:id="@+id/etVerifyCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:inputType="number"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivCode"
+                android:textColorHint="@color/white"
+                android:hint="验证码"
+                android:textSize="13sp"
+                android:background="@null" />
+
+        </RelativeLayout>
+        <com.enternityfintech.goldcard.widget.PaperButton
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            widget:paper_corner_radius="19dp"
+            widget:paper_text_size="13sp"
+            widget:paper_text="发送验证码"
+            widget:paper_color="@color/codeGary"
+            widget:paper_text_color="@color/white"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_border_color_black">
+
+        <ImageView
+            android:id="@+id/ivPassword"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/codeicon"/>
+
+        <com.enternityfintech.goldcard.widget.EditTextWithDel
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivPassword"
+            android:textColorHint="@color/white"
+            android:textColor="@color/black0"
+            android:hint="请输入您的密码"
+            android:textSize="13sp"
+            android:background="@null"/>
+    </RelativeLayout>
+
+    <com.enternityfintech.goldcard.widget.PaperButton
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        widget:paper_corner_radius="19dp"
+        widget:paper_text="下一步"
+        widget:paper_color="@color/maincolor"
+        widget:paper_text_color="@color/white"/>
+
+</LinearLayout>

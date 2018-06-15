@@ -13,7 +13,7 @@ import rx.subscriptions.CompositeSubscription;
  * Created by cgy
  * 2018/6/14  14:22
  */
-public class BasePresenter<V extends BaseView> {
+public class BasePresenter<V> {
 
     /*=============以下是网络请求接口============*/
 

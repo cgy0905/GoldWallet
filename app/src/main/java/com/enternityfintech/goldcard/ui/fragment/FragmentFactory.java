@@ -25,6 +25,8 @@ public class FragmentFactory {
 
     public HomeFragment homeFragment;
     public MineFragment mineFragment;
+    public RegisterFragment registerFragment;
+    public LoginFragment loginFragment;
 
 
     public HomeFragment getHomeFragment() {
@@ -47,5 +49,28 @@ public class FragmentFactory {
             }
         }
         return mineFragment;
+    }
+
+
+    public RegisterFragment getRegisterFragment() {
+        if (registerFragment == null) {
+            synchronized (FragmentFactory.class) {
+                if (registerFragment == null) {
+                    registerFragment = new RegisterFragment();
+                }
+            }
+        }
+        return registerFragment;
+    }
+
+    public LoginFragment getLoginFragment() {
+        if (loginFragment == null) {
+            synchronized (FragmentFactory.class) {
+                if (loginFragment == null) {
+                    loginFragment = new LoginFragment();
+                }
+            }
+        }
+        return loginFragment;
     }
 }
