@@ -21,7 +21,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.WebViewActivity" />
-        <activity android:name=".ui.activity.LoginActivity"></activity>
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.TradeRecordActivity" />
+        <activity android:name=".ui.activity.TradeDetailActivity" />
+        <activity android:name=".ui.activity.TransferGoldActivity"></activity>
     </application>
 
 </manifest>
