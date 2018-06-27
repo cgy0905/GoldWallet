@@ -92,7 +92,7 @@
             widget:paper_corner_radius="19dp"
             widget:paper_text_size="13sp"
             widget:paper_text="发送验证码"
-            widget:paper_color="@color/codeGary"
+            widget:paper_color="@color/dark_gray"
             widget:paper_text_color="@color/white"/>
 
     </LinearLayout>
@@ -133,7 +133,7 @@
     </RelativeLayout>
 
     <com.enternityfintech.goldcard.widget.PaperButton
-        android:id="@+id/next"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="40dp"
@@ -142,8 +142,8 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         widget:paper_corner_radius="19dp"
-        widget:paper_text="下一步"
-        widget:paper_color="@color/maincolor"
+        widget:paper_text="注册"
+        widget:paper_color="@color/main_color"
         widget:paper_text_color="@color/white"/>
 
 </LinearLayout>

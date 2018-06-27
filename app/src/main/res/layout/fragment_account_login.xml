@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_large"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:paddingTop="100dp">
 
+    <com.enternityfintech.goldcard.widget.ClearableEditText
+        android:id="@+id/et_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_line"
+        android:drawableLeft="@drawable/icon_login_account"
+        android:drawablePadding="@dimen/margin_large"
+        android:hint="@string/account_input"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingBottom="@dimen/margin_b"
+        android:paddingLeft="@dimen/padding_s"
+        android:paddingTop="@dimen/margin_b"
+        app:clearIconDrawable="@drawable/btn_cancel"
+        app:clearIconGravity="right|center_vertical" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/layer_line"
+        android:drawableLeft="@drawable/icon_password_off"
+        android:drawablePadding="@dimen/margin_large"
+        android:hint="@string/password_input"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:paddingBottom="@dimen/margin_b"
+        android:paddingLeft="@dimen/padding_s"
+        android:paddingTop="@dimen/margin_b" />
+
+
+    <com.enternityfintech.goldcard.widget.StatedImageView
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/btn_login" />
+
+    <TextView
+        android:id="@+id/tv_forget_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/forget_pwd"
+        android:textColor="@color/main_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_account" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_immediately"
+            android:textColor="@color/main_color" />
+    </LinearLayout>
 </LinearLayout>

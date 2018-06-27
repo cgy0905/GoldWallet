@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/white">
 
@@ -23,7 +23,7 @@
             android:text="@string/tab_home"
             android:textSize="@dimen/bottom_menu_text_size"
             android:textColor="@color/tab_text_color"
-            android:drawableTop="@drawable/selector_tabbar_home_btn"/>
+            android:drawableTop="@drawable/selector_tab_bar_home_btn"/>
 
         <RadioButton
             android:id="@+id/rbMe"
@@ -36,7 +36,7 @@
             android:text="@string/tab_me"
             android:textSize="@dimen/bottom_menu_text_size"
             android:textColor="@color/tab_text_color"
-            android:drawableTop="@drawable/selector_tabbar_me_btn"/>
+            android:drawableTop="@drawable/selector_tab_bar_me_btn"/>
 
     </RadioGroup>
 

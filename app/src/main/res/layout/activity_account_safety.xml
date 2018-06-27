@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/windowBackground"
+    android:orientation="vertical">
+
+    <com.enternityfintech.goldcard.widget.ToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="@string/account_safe" />
+
+    <TextView
+        android:id="@+id/tv_login_pwd"
+        style="@style/OptionItemBg"
+        android:layout_marginTop="@dimen/padding_l"
+        android:drawableEnd="@drawable/arrow_right"
+        android:text="@string/login_password"
+        android:textColor="@color/title" />
+
+    <View
+        style="@style/Line.H"
+        android:layout_marginEnd="@dimen/margin_b"
+        android:layout_marginStart="@dimen/margin_b" />
+
+    <TextView
+        android:id="@+id/tv_trade_pwd"
+        style="@style/OptionItemBg"
+        android:drawableEnd="@drawable/arrow_right"
+        android:onClick="onItemClick"
+        android:text="@string/trade_password"
+        android:textColor="@color/title" />
 
 </LinearLayout>

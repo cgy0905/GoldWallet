@@ -1,4 +1,4 @@
-package com.enternityfintech.gold.app.widget;
+package com.enternityfintech.goldcard.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,8 +8,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.enternityfintech.gold.app.R;
-import com.enternityfintech.gold.app.util.Util;
+import com.enternityfintech.goldcard.R;
+import com.enternityfintech.goldcard.utils.UIUtils;
 
 
 /**
@@ -78,7 +78,7 @@ public class CodeView extends View {
             dividerWidth = 1;
             code = "";
             codeColor = Color.parseColor("#000000");
-            pointRadius = Util.dpToPx(getContext(), 8);
+            pointRadius = UIUtils.dip2Px(8);
             showType = SHOW_TYPE_WORD;
             textSize = 0;
         } else {
@@ -93,7 +93,7 @@ public class CodeView extends View {
                 code = "";
             }
             codeColor = typedArray.getColor(R.styleable.CodeView_codeColor, Color.parseColor("#000000"));
-            pointRadius = typedArray.getDimensionPixelSize(R.styleable.CodeView_pointRadius, Util.dpToPx(getContext(), 8));
+            pointRadius = typedArray.getDimensionPixelSize(R.styleable.CodeView_pointRadius, UIUtils.dip2Px(8));
             showType = typedArray.getInt(R.styleable.CodeView_showType, SHOW_TYPE_WORD);
             textSize = typedArray.getDimensionPixelSize(R.styleable.CodeView_textSize, 0);
         }
@@ -151,7 +151,7 @@ public class CodeView extends View {
                 final float left = unitWidth * i + dividerWidth * i + borderWidth;
                 canvas.drawText(code.charAt(i) + "",
                         left + unitWidth / 2,
-                        Util.getTextBaseLine(0, getHeight(), paint),
+                        UIUtils.getTextBaseLine(0, getHeight(), paint),
                         paint);
             }
         }
@@ -293,9 +293,9 @@ public class CodeView extends View {
 
     public interface Listener {
 
-        public void onValueChanged(String value);
+        void onValueChanged(String value);
 
-        public void onComplete(String value);
+        void onComplete(String value);
 
     }
 

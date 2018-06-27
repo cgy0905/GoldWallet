@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/windowBackground">
+
+    <com.enternityfintech.goldcard.widget.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/modify_trade_pwd" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/trade_password_tips"
+        android:textColor="@color/light_gray"
+        android:lineSpacingExtra="@dimen/padding_s"
+        android:textSize="14sp" />
+
+    <com.enternityfintech.goldcard.widget.CodeView
+        android:id="@+id/pwd_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/margin_large"
+        android:background="@color/transparent"
+        app:borderColor="@color/board_gray"
+        app:borderWidth="1dp"
+        app:codeColor="@color/black"
+        app:dividerColor="@color/board_gray"
+        app:dividerWidth="1dp"
+        app:length="6"
+        app:pointRadius="4dp"
+        app:showType="password" />
 
 </LinearLayout>

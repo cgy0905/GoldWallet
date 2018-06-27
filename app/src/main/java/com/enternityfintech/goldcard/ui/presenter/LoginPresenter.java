@@ -11,6 +11,7 @@ import com.enternityfintech.goldcard.ui.base.BaseActivity;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
 import com.enternityfintech.goldcard.ui.view.ILoginView;
 import com.enternityfintech.goldcard.utils.LogUtils;
+import com.enternityfintech.goldcard.utils.RegularUtils;
 import com.enternityfintech.goldcard.utils.UIUtils;
 
 import rx.android.schedulers.AndroidSchedulers;
@@ -30,10 +31,11 @@ public class LoginPresenter extends BasePresenter<ILoginView>{
             UIUtils.showToast(UIUtils.getString(R.string.phone_not_empty));
             return;
         }
-        if (TextUtils.isEmpty(password)) {
-            UIUtils.showToast(UIUtils.getString(R.string.password_not_empty));
+        if (RegularUtils.isMobile(phone)) {
+            UIUtils.showToast(UIUtils.getString(R.string.incorrect_phone_format));
             return;
         }
+
         mContext.showWaitingDialog(UIUtils.getString(R.string.please_wait));
         ApiRetrofit.getInstance().login(AppConst.REGION, phone, password)
                 .subscribeOn(Schedulers.io())
@@ -53,5 +55,9 @@ public class LoginPresenter extends BasePresenter<ILoginView>{
         LogUtils.e(throwable.getLocalizedMessage());
         UIUtils.showToast(throwable.getLocalizedMessage());
         mContext.hideWaitingDialog();
+    }
+
+    public void sendCode() {
+
     }
 }

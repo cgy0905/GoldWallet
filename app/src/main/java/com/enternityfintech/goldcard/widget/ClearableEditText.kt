@@ -10,7 +10,7 @@ import android.view.Gravity
 import android.view.MotionEvent
 import com.enternityfintech.goldcard.R
 
-class ClearbleEditText @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = android.R.attr.editTextStyle) : android.support.v7.widget.AppCompatEditText(context, attrs, defStyle) {
+class ClearableEditText @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = android.R.attr.editTextStyle) : android.support.v7.widget.AppCompatEditText(context, attrs, defStyle) {
 
     private var mTextCount = 0
     private var mClearIconGravity = Gravity.TOP
@@ -32,22 +32,22 @@ class ClearbleEditText @JvmOverloads constructor(context: Context, attrs: Attrib
     init {
         val theme = context.theme
         val typedArray = theme.obtainStyledAttributes(attrs, R.styleable
-                .ClearbleEditText, defStyle, 0)
+                .ClearableEditText, defStyle, 0)
         val count = typedArray.indexCount
         for (i in 0 until count) {
             val attr = typedArray.getIndex(i)
-            if (attr == R.styleable.ClearbleEditText_clearIconPadding) {
+            if (attr == R.styleable.ClearableEditText_clearIconPadding) {
                 setClearIconPadding(typedArray.getDimension(attr, 0f).toInt())
-            } else if (attr == R.styleable.ClearbleEditText_clearIconDrawable) {
+            } else if (attr == R.styleable.ClearableEditText_clearIconDrawable) {
                 val drawable = typedArray.getDrawable(attr)
                 if (drawable != null) {
                     mClearIconDrawable = drawable
                 }
-            } else if (attr == R.styleable.ClearbleEditText_clearIconGravity) {
+            } else if (attr == R.styleable.ClearableEditText_clearIconGravity) {
                 setClearIconGravity(typedArray.getInt(attr, -1))
-            } else if (attr == R.styleable.ClearbleEditText_clearIconClipParentPadding) {
+            } else if (attr == R.styleable.ClearableEditText_clearIconClipParentPadding) {
                 mIsClearIconClipPadding = typedArray.getBoolean(attr, false)
-            } else if (attr == R.styleable.ClearbleEditText_clearIconDivision) {
+            } else if (attr == R.styleable.ClearableEditText_clearIconDivision) {
                 setClearIconDivision(typedArray.getBoolean(attr, true))
             }
         }

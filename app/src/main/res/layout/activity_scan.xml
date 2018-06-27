@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground">
+
+    <com.enternityfintech.goldcard.widget.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/my_qr"
+        app:titleColor="@color/title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="345dp"
+        android:background="@color/white"
+        android:layout_marginRight="@dimen/margin_b"
+        android:layout_marginLeft="@dimen/margin_b"
+        android:layout_marginTop="@dimen/padding_l">
+
+        <ImageView
+            android:layout_width="203dp"
+            android:layout_height="203dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_camera"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

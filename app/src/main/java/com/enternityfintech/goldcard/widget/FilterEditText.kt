@@ -1,4 +1,4 @@
-package com.enternityfintech.gold.app.widget
+package com.enternityfintech.goldcard.widget
 
 import android.content.Context
 import android.text.InputFilter

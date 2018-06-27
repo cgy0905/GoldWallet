@@ -22,13 +22,91 @@
     <string name="save_fail">保存失败</string>
     <string name="cancel">取消</string>
     <string name="sure">确定</string>
+    <string name="affirm">确认</string>
     <string name="sure_with_count">确定(%1$d)</string>
 
     <string name="exit_app">再按一次退出应用程序</string>
+    <string name="back">返回</string>
 
-
+    <!--登录-->
     <string-array name="tab_names">
-        <item>登录</item>
-        <item>注册</item>
+        <item>快速登录</item>
+        <item>密码登录</item>
     </string-array>
+
+    <string name="phone_input">请输入手机号</string>
+    <string name="verify_code_input">请输入验证码</string>
+    <string name="verify_code_get">获取验证码</string>
+    <string name="register_immediately">立即注册</string>
+    <string name="account_hint">请输入账号</string>
+    <string name="password_input">请输入密码</string>
+    <string name="forget_pwd">忘记密码</string>
+    <string name="not_account">还没有账号？</string>
+    <string name="password_retrieve">密码找回</string>
+    <string name="account_register">账号注册</string>
+    <string name="existing_account">已有账号？</string>
+    <string name="login_immediately">立即登录</string>
+    <string name="password_input_again">请再次输入密码</string>
+    <string name="phone_not_empty">手机号不能为空</string>
+    <string name="incorrect_phone_format">手机号格式不正确</string>
+
+
+
+
+    <!--我-->
+    <string name="message_notification">消息通知</string>
+    <string name="authentication">身份认证</string>
+    <string name="safety_account">账户安全</string>
+    <string name="settings">设置</string>
+    <string name="profile_mine">我的资料</string>
+    <string name="select_album">相册选取</string>
+    <string name="select_camera">相机拍摄</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="secrecy">保密</string>
+    <string name="nickname_modify">修改昵称</string>
+    <string name="nickname_input">请输入昵称</string>
+    <string name="my_qr">我的二维码</string>
+    <string name="message">消息</string>
+    <string name="identity">身份验证</string>
+    <string name="input_real_name">请输入真实姓名</string>
+    <string name="submit">提交</string>
+    <string name="account_safe">账户安全</string>
+    <string name="login_password">登录密码</string>
+    <string name="trade_password">交易密码</string>
+    <string name="modify_login_password">修改登录密码</string>
+    <string name="old">旧</string>
+    <string name="text_new">新</string>
+    <string name="account_input">请输入账号</string>
+    <string name="trade_password_modify">修改交易密码</string>
+    <string name="trade_pwd_modify_tip">您是否记得账号%1s\n当前使用的交易密码</string>
+    <string name="trade_pwd_setting_tip">请为账号%1s设置\n6位数字交易密码</string>
+    <string name="remember">记得</string>
+    <string name="forget">不记得</string>
+    <string name="trade_password_setting">设置交易密码</string>
+    <string name="verify_code_send">我们已发送验证码到你的手机</string>
+    <string name="regain">重新获取</string>
+    <string name="modify_trade_pwd">修改交易密码</string>
+    <string name="password_input_verify">请输入原交易密码\n完成身份认证</string>
+    <string name="trade_password_tips">请再次输入6位数字\n交易密码</string>
+    <string name="setting">设置</string>
+    <string name="contact_number">400-8160-0006</string>
+    <string name="about_us">关于我们</string>
+    <string name="version_code">v1.0</string>
+    <string name="company_name">成都恒信博达科技有限公司</string>
+    <string name="company_phone">电话：028-86156173</string>
+    <string name="company_email">邮箱：gc@heshidai.com</string>
+    <string name="hold_desc">黄金卡可以提出实物黄金卡，</string>
+    <string name="turn_to_account">转入账户</string>
+    <string name="account_name">账户姓名</string>
+    <string name="trade_count">交易数量</string>
+    <string name="trade_time">交易时间</string>
+    <string name="phone_format_error">手机号格式不正确</string>
+    <string name="phone_not_available">手机号不可用</string>
+    <string name="send_code_error">发送验证码异常</string>
+    <string name="password_not_empty">密码不能为空</string>
+    <string name="vertify_code_not_empty">验证码不能为空</string>
+    <string name="send_code_btn_normal_tip">重新发送</string>
+
+
 </resources>

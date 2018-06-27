@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/actionBarSize">
+    android:layout_height="?android:attr/actionBarSize">
 
-    <com.enternityfintech.gold.app.widget.StatedImageView
+    <com.enternityfintech.goldcard.widget.StatedImageView
         android:id="@+id/iv_back"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:paddingEnd="30dp"
-        android:paddingStart="@dimen/margin_b"
+        android:paddingRight="30dp"
+        android:paddingLeft="@dimen/margin_b"
         android:scaleType="center"
-        android:src="@drawable/icon_arrow_left" />
+        android:src="@drawable/icon_back" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -25,13 +25,13 @@
     <Button
         android:id="@+id/btn_sure"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:background="@null"
         android:gravity="center"
         android:textColor="@color/black"
-        android:minWidth="@dimen/actionBarSize"
+        android:minWidth="?android:attr/actionBarSize"
         android:text="@string/sure"
         android:visibility="invisible" />
 </RelativeLayout>

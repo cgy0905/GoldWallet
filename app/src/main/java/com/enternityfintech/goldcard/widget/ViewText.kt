@@ -1,10 +1,10 @@
-package com.enternityfintech.gold.app.widget
+package com.enternityfintech.goldcard.widget
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
-import com.enternityfintech.gold.app.R
+import com.enternityfintech.goldcard.R
 import kotlinx.android.synthetic.main.view_text.view.*
 
 /**

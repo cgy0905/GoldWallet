@@ -8,7 +8,7 @@ import com.enternityfintech.goldcard.ui.base.BasePresenter;
  * Created by cgy
  * 2018/6/22  9:02
  */
-public class TradePwdSettingsActivity extends BaseActivity{
+public class TradePwdSetActivity extends BaseActivity{
     @Override
     protected BasePresenter createPresenter() {
         return null;

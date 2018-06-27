@@ -51,18 +51,91 @@
         <!--<item name="android:button">@drawable/checkbox_style</item>-->
     <!--</style>-->
 
-    <!--&lt;!&ndash;实下滑线样式&ndash;&gt;-->
-    <!--<style name="Line">-->
-        <!--<item name="android:layout_width">match_parent</item>-->
-        <!--<item name="android:layout_height">0.5dp</item>-->
-        <!--<item name="android:background">@color/line</item>-->
-    <!--</style>-->
+    <style name="TextViewContentStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/title</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 
-    <!--&lt;!&ndash;选项条目样式&ndash;&gt;-->
+
+    <style name="TextViewContent" parent="TextViewContentStyle">
+        <item name="android:textColor">@color/bg_Gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Keyboard">
+
+            <item name="android:textSize">24dp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:background">@drawable/selector_keyboard_bg</item>
+            <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--实下滑线样式-->
+    <style name="Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="HomeRedLine">
+        <item name="android:layout_width">3dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:background">@drawable/shape_home_line_bg</item>
+    </style>
+
+    <!--选项条目样式-->
     <!--<style name="OptionItem">-->
         <!--<item name="android:layout_width">match_parent</item>-->
         <!--<item name="android:layout_height">102px</item>-->
         <!--<item name="android:background">@color/white</item>-->
     <!--</style>-->
 
+
+    <style name="OptionItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/margin_b</item>
+        <item name="android:paddingEnd">@dimen/margin_b</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:drawablePadding">@dimen/padding_l</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/selector_option_white</item>
+    </style>
+
+    <style name="OptionItem.Center">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="OptionItemBg" parent="OptionItem">
+        <item name="android:background">@drawable/selector_option_white</item>
+    </style>
+
+    <style name="OptionItemBg.Center" parent="OptionItem.Center">
+        <item name="android:background">@drawable/selector_option_white</item>
+    </style>
+
+    <style name="OptionItemBg.Center.Corner" parent="OptionItem.Center">
+        <item name="android:background">@drawable/selector_option_white_corner</item>
+    </style>
+
+    <style name="Line.H">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    
+    <style name="Detail_LeftTextView_Style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/content_s</item>
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="Detail_RightTextView_Style" parent="Detail_LeftTextView_Style">
+        <item name="android:textSize">@dimen/content</item>
+        <item name="android:textColor">@color/title</item>
+    </style>
 </resources>

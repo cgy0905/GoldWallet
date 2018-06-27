@@ -1,5 +1,8 @@
 package com.enternityfintech.goldcard.ui.fragment;
 
+import android.os.Bundle;
+
+import com.enternityfintech.goldcard.R;
 import com.enternityfintech.goldcard.ui.base.BaseFragment;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
 
@@ -8,6 +11,15 @@ import com.enternityfintech.goldcard.ui.base.BasePresenter;
  * 2018/6/14  17:39
  */
 public class HomeFragment extends BaseFragment{
+
+    public static HomeFragment newInstance() {
+
+        Bundle args = new Bundle();
+
+        HomeFragment homeFragment = new HomeFragment();
+        homeFragment.setArguments(args);
+        return homeFragment;
+    }
     @Override
     protected BasePresenter createPresenter() {
         return null;
@@ -15,6 +27,6 @@ public class HomeFragment extends BaseFragment{
 
     @Override
     protected int provideContentViewId() {
-        return 0;
+        return R.layout.fragment_home;
     }
 }

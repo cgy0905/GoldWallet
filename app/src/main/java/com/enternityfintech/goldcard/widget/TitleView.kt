@@ -1,4 +1,4 @@
-package com.enternityfintech.gold.app.widget
+package com.enternityfintech.goldcard.widget
 
 import android.app.Activity
 import android.content.Context
@@ -10,8 +10,9 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
-import com.enternityfintech.gold.app.R
-import com.enternityfintech.gold.app.util.Util
+
+import com.enternityfintech.goldcard.R
+import com.enternityfintech.goldcard.utils.ScreenUtils
 import kotlinx.android.synthetic.main.common_title.view.*
 
 /**
@@ -44,7 +45,7 @@ class TitleView @JvmOverloads constructor(
 
         val isImmersion = typedArray.getBoolean(R.styleable.TitleView_isImmersion, true)
         if (isImmersion) {
-            val statusBarHeight = Util.getStatusBarHeight(context)
+            val statusBarHeight = ScreenUtils.getStatusBarHeight(context)
             setPadding(0, statusBarHeight, 0, 0)
         }
 

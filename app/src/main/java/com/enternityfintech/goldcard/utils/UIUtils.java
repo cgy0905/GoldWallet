@@ -2,6 +2,7 @@ package com.enternityfintech.goldcard.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Paint;
 import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -45,11 +46,6 @@ public class UIUtils {
         mToast.setText(msg);
         mToast.show();
     }
-
-
-
-
-
 
 
     /**
@@ -227,5 +223,16 @@ public class UIUtils {
             return resources.getDimensionPixelSize(resourceId);
         }
         return 0;
+    }
+
+    /**
+     * @param backgroundTop
+     * @param backgroundBottom
+     * @param paint
+     * @return paint绘制居中文字时，获取文本底部坐标
+     */
+    public static float getTextBaseLine(float backgroundTop, float backgroundBottom, Paint paint) {
+        final Paint.FontMetrics fontMetrics = paint.getFontMetrics();
+        return (backgroundTop + backgroundBottom - fontMetrics.bottom - fontMetrics.top) / 2;
     }
 }

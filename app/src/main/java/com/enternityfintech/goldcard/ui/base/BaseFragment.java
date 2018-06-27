@@ -3,7 +3,6 @@ package com.enternityfintech.goldcard.ui.base;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import butterknife.ButterKnife;
  * Created by cgy
  * 2018/6/14  14:17
  */
-public abstract class BaseFragment<V, T extends BasePresenter<V>> extends Fragment{
+public abstract class BaseFragment<V, T extends BasePresenter<V>> extends LazyLoadFragment{
 
     protected T mPresenter;
 
@@ -56,7 +55,6 @@ public abstract class BaseFragment<V, T extends BasePresenter<V>> extends Fragme
         if (mPresenter != null) {
             mPresenter.detachView();
         }
-        ButterKnife.unbind(this);
     }
     public void init() {
 

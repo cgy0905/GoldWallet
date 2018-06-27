@@ -7,8 +7,8 @@ import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.enternityfintech.goldcard.R;
 
@@ -17,33 +17,33 @@ import com.enternityfintech.goldcard.R;
  * 2018/6/20  9:18
  * 公共的标题栏
  */
-public class TitleBar extends RelativeLayout{
+public class ToolBar extends Toolbar{
 
     private ImageView ivBack, ivScan;
     private TextView tvTitle;
-    public TitleBar(Context context) {
+    public ToolBar(Context context) {
         this(context,null);
     }
 
-    public TitleBar(Context context, AttributeSet attrs) {
+    public ToolBar(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public TitleBar(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ToolBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.TitleBar, defStyleAttr, 0);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ToolBar, defStyleAttr, 0);
 
-        int leftIvBackground = ta.getResourceId(R.styleable.TitleBar_leftBackground, 0);
-        int rightIvBackground = ta.getResourceId(R.styleable.TitleBar_rightBackground, 0);
-        String title = ta.getString(R.styleable.TitleBar_titleText);
-        Boolean rightState = ta.getBoolean(R.styleable.TitleBar_rightState,true);
-        float titleTextSize = ta.getDimension(R.styleable.TitleBar_titleTextSize, 0);
-        int bgColor = ta.getColor(R.styleable.TitleBar_backgroundColor, Color.parseColor("#FFFFFF"));
-        int titleTextColor = ta.getColor(R.styleable.TitleBar_titleTextColor, Color.parseColor("#333333"));
+        int leftIvBackground = ta.getResourceId(R.styleable.ToolBar_leftBackground, 0);
+        int rightIvBackground = ta.getResourceId(R.styleable.ToolBar_rightBackground, 0);
+        String title = ta.getString(R.styleable.ToolBar_titleText);
+        Boolean rightState = ta.getBoolean(R.styleable.ToolBar_rightState,true);
+        float titleTextSize = ta.getDimension(R.styleable.ToolBar_titleTextSize, 0);
+        int bgColor = ta.getColor(R.styleable.ToolBar_backgroundColor, Color.parseColor("#FFFFFF"));
+        int titleTextColor = ta.getColor(R.styleable.ToolBar_titleTextColor, Color.parseColor("#333333"));
         ta.recycle();
         View.inflate(context, R.layout.include_titlebar, this);
-        RelativeLayout headBg = findViewById(R.id.head_bg);
+
         ivBack = findViewById(R.id.ivToolbarBack);
         tvTitle = findViewById(R.id.tvToolbarTitle);
         ivScan = findViewById(R.id.ivToolbarScan);
@@ -53,7 +53,6 @@ public class TitleBar extends RelativeLayout{
         ivBack.setBackgroundResource(leftIvBackground);
         ivScan.setBackgroundResource(rightIvBackground);
         ivScan.setVisibility(rightState == true ? View.VISIBLE : View.INVISIBLE);
-        headBg.setBackgroundColor(bgColor);
     }
 
     @Override

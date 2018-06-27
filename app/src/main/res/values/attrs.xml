@@ -58,4 +58,75 @@
         <attr name="isRefreshable" format="boolean" />
         <attr name="isLoadable" format="boolean" />
     </declare-styleable>
+
+    <!--通用的标题-->
+    <declare-styleable name="ToolBar">
+        <attr name="leftBackground" format="reference"/>
+        <attr name="rightBackground" format="reference"/>
+        <attr name="titleText" format="string"/>
+        <attr name="titleTextColor" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="rightState" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TitleView">
+        <attr name="backDrawable" format="reference" />
+        <attr name="title" format="string" />
+        <attr name="submit" format="string" />
+        <attr name="bg" format="color" />
+        <attr name="isImmersion" format="boolean" />
+        <attr name="titleColor" format="color" />
+        <attr name="submitColor" format="color" />
+        <attr name="submitRes" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ClearableEditText">
+        <attr name="clearIconDrawable" format="reference" />
+        <attr name="clearIconPadding" format="dimension" />
+        <attr name="clearIconGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+        </attr>
+        <attr name="clearIconClipParentPadding" format="boolean" />
+        <attr name="clearIconDivision" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewText">
+        <attr name="icon" format="reference" />
+        <attr name="text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CodeView">
+        <attr name="length" format="integer" />
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="code" format="string" />
+        <attr name="codeColor" format="color" />
+        <attr name="pointRadius" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="showType" format="enum">
+            <enum name="word" value="1" />
+            <enum name="password" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AmountView">
+        <!--左右两边+-按钮的宽度-->
+        <attr name="btnWidth" format="dimension" />
+        <!--中间TextView的宽度-->
+        <attr name="tvWidth"  format="dimension" />
+        <attr name="tvTextSize" format="dimension" />
+        <attr name="btnTextSize" format="dimension" />
+
+    </declare-styleable>
 </resources>

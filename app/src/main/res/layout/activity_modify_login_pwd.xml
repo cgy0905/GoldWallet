@@ -1,6 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg"
+    android:orientation="vertical">
+
+    <com.enternityfintech.goldcard.widget.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/modify_login_password" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <com.enternityfintech.goldcard.widget.ViewText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            app:icon="@drawable/icon_password_off"
+            app:text="@string/old" />
+        <com.enternityfintech.goldcard.widget.ClearableEditText
+            android:id="@+id/et_oldpass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入旧密码"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/margin_large"
+            app:clearIconDrawable="@drawable/btn_cancel"
+            app:clearIconGravity="right|center_vertical"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        <com.enternityfintech.goldcard.widget.ViewText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            app:icon="@drawable/icon_password_off"
+            app:text="@string/text_new" />
+
+        <com.enternityfintech.goldcard.widget.ClearableEditText
+            android:id="@+id/et_newpass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入新密码"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/margin_large"
+            app:clearIconDrawable="@drawable/btn_cancel"
+            app:clearIconGravity="right|center_vertical"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        <com.enternityfintech.goldcard.widget.ViewText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            app:icon="@drawable/icon_password_on"
+            app:text="@string/text_new" />
+
+        <com.enternityfintech.goldcard.widget.ClearableEditText
+            android:id="@+id/et_repass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请再次输入新密码"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/margin_large"
+            app:clearIconDrawable="@drawable/btn_cancel"
+            app:clearIconGravity="right|center_vertical"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/divider" />
+
+    <com.enternityfintech.goldcard.widget.StatedImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/btn_submit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+        android:gravity="center_vertical|right"
+        android:onClick="onForgetPwd"
+        android:padding="@dimen/padding"
+        android:text="忘记旧密码"
+        android:textColor="@color/selector_text_gold"
+        android:textSize="16sp" />
 
 </LinearLayout>

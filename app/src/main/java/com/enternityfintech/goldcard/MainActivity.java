@@ -11,28 +11,26 @@ import android.widget.RadioButton;
 
 import com.enternityfintech.goldcard.ui.base.BaseActivity;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
-import com.enternityfintech.goldcard.ui.fragment.FragmentFactory;
 import com.enternityfintech.goldcard.ui.fragment.HomeFragment;
 import com.enternityfintech.goldcard.ui.fragment.MineFragment;
 import com.enternityfintech.goldcard.utils.UIUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
 
-    @Bind(R.id.flContent)
+
+    @BindView(R.id.flContent)
     FrameLayout flContent;
-    @Bind(R.id.rbHome)
+    @BindView(R.id.rbHome)
     RadioButton rbHome;
-    @Bind(R.id.rbMe)
+    @BindView(R.id.rbMe)
     RadioButton rbMe;
-
-
     private HomeFragment homeFragment;
-
     private MineFragment mineFragment;
+
 
     @Override
     protected BasePresenter createPresenter() {
@@ -48,20 +46,25 @@ public class MainActivity extends BaseActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         hideAllFragment(fragmentTransaction);
         if (homeFragment == null) {
-            homeFragment = FragmentFactory.getInstance().getHomeFragment();
+            homeFragment = HomeFragment.newInstance();
             fragmentTransaction.add(R.id.flContent, homeFragment);
         }
         commitShowFragment(fragmentTransaction, homeFragment);
+    }
+
+    @Override
+    public void initView() {
+        showHomeFragment();
     }
 
     public void showMineFragment() {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         hideAllFragment(fragmentTransaction);
         if (mineFragment == null) {
-            mineFragment = FragmentFactory.getInstance().getMineFragment();
+            mineFragment = MineFragment.newInstance();
             fragmentTransaction.add(R.id.flContent, mineFragment);
         }
-        commitShowFragment(fragmentTransaction, homeFragment);
+        commitShowFragment(fragmentTransaction, mineFragment);
     }
 
     private void commitShowFragment(FragmentTransaction transaction, Fragment fragment) {
@@ -113,5 +116,4 @@ public class MainActivity extends BaseActivity {
         }
 
     }
-
 }

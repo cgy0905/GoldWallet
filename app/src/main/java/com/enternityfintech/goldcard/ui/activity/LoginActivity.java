@@ -1,31 +1,35 @@
 package com.enternityfintech.goldcard.ui.activity;
 
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.WindowManager;
 
+import com.androidkun.xtablayout.XTabLayout;
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.adapter.TabViewPagerAdapter;
 import com.enternityfintech.goldcard.ui.base.BaseActivity;
+import com.enternityfintech.goldcard.ui.base.BaseFragment;
+import com.enternityfintech.goldcard.ui.base.BaseFragmentAdapter;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
-import com.enternityfintech.goldcard.ui.fragment.HomeFragment;
-import com.enternityfintech.goldcard.ui.fragment.LoginFragment;
+import com.enternityfintech.goldcard.ui.fragment.AccountLoginFragment;
+import com.enternityfintech.goldcard.ui.fragment.FastLoginFragment;
+import com.enternityfintech.goldcard.widget.TitleView;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 public class LoginActivity extends BaseActivity {
 
 
-    @Bind(R.id.login_tabs)
-    TabLayout loginTabs;
-    @Bind(R.id.login_viewpager)
-    ViewPager login_viewpager;
 
-    ArrayList<Fragment> fragmentList = new ArrayList<>();
-
+    List<BaseFragment> fragmentList = new ArrayList<>();
+    @BindView(R.id.titleView)
+    TitleView titleView;
+    @BindView(R.id.login_tabs)
+    XTabLayout loginTabs;
+    @BindView(R.id.login_viewpager)
+    ViewPager loginViewpager;
+    private String[] titles;
 
 
     @Override
@@ -37,12 +41,12 @@ public class LoginActivity extends BaseActivity {
     @Override
     public void initData() {
         //初始化viewpager的数据
-        String[] titles = getResources().getStringArray(R.array.tab_names);
-        fragmentList.add(new LoginFragment());
-        fragmentList.add(new HomeFragment());
-        TabViewPagerAdapter adapter = new TabViewPagerAdapter(getSupportFragmentManager(), fragmentList, titles);
-        login_viewpager.setAdapter(adapter);
-        loginTabs.setupWithViewPager(login_viewpager);
+        titles = getResources().getStringArray(R.array.tab_names);
+        fragmentList.add(new AccountLoginFragment());
+        fragmentList.add(new FastLoginFragment());
+        BaseFragmentAdapter adapter = new BaseFragmentAdapter(getSupportFragmentManager(), fragmentList, titles);
+        loginViewpager.setAdapter(adapter);
+        loginTabs.setupWithViewPager(loginViewpager);
 
     }
 
@@ -85,6 +89,7 @@ public class LoginActivity extends BaseActivity {
     protected int provideContentViewId() {
         return R.layout.activity_login;
     }
+
 
 
 }

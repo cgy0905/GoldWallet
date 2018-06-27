@@ -51,5 +51,9 @@
     <dimen name="content_s">12sp</dimen>
     <dimen name="font_s">10sp</dimen>
 
+    <dimen name="login_tab_margin">53dp</dimen>
+    <dimen name="tab_selected_size">30sp</dimen>
+    <dimen name="tab_text_size">24sp</dimen>
+
 
 </resources>

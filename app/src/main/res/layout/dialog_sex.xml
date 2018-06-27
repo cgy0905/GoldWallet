@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_large">
+
+    <Button
+        android:id="@+id/btn_male"
+        style="@style/OptionItemBg.Center.Corner"
+        android:text="@string/man"
+        android:textColor="@color/title"
+        android:textSize="@dimen/content_b" />
+
+
+    <Button
+        android:id="@+id/btn_female"
+        style="@style/OptionItemBg.Center.Corner"
+        android:text="@string/woman"
+        android:textColor="@color/title"
+        android:textSize="@dimen/content_b" />
+
+    <View style="@style/Line" />
+
+    <Button
+        android:id="@+id/btn_secret"
+        style="@style/OptionItemBg.Center.Corner"
+        android:text="@string/secrecy"
+        android:textColor="@color/title"
+        android:textSize="@dimen/content_b" />
+
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="@style/OptionItemBg.Center.Corner"
+        android:layout_marginTop="@dimen/padding"
+        android:text="@string/cancel"
+        android:textColor="@color/title"
+        android:textSize="@dimen/content_b" />
 
 </LinearLayout>

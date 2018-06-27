@@ -6,13 +6,6 @@ package com.enternityfintech.goldcard.ui.view;
  */
 public interface ILoginView {
 
-    void showLoading();
-
-    void hideLoading();
-
-    void showUserNameError(String error);
-
-    void showPassWordError(String error);
-
     void loginSuccess();
+
 }

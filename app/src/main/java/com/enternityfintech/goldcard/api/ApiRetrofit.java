@@ -2,7 +2,10 @@ package com.enternityfintech.goldcard.api;
 
 import com.enternityfintech.goldcard.api.base.BaseApiRetrofit;
 import com.enternityfintech.goldcard.model.request.LoginRequest;
+import com.enternityfintech.goldcard.model.response.CheckPhoneResponse;
 import com.enternityfintech.goldcard.model.response.LoginResponse;
+import com.enternityfintech.goldcard.model.response.SendCodeResponse;
+import com.enternityfintech.goldcard.model.response.VerifyCodeResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -37,6 +40,7 @@ public class ApiRetrofit extends BaseApiRetrofit{
                 .create(MyApi.class);
     }
 
+
     public static ApiRetrofit getInstance() {
         if (mInstance == null) {
             synchronized (ApiRetrofit.class) {
@@ -55,5 +59,17 @@ public class ApiRetrofit extends BaseApiRetrofit{
 
     public Observable<LoginResponse> login(String region, String phone, String password) {
         return mApi.login(getRequestBody(new LoginRequest(region, phone, password)));
+    }
+
+    public Observable<CheckPhoneResponse> checkPhoneAvailable(String phone) {
+        return null;
+    }
+
+    public Observable<VerifyCodeResponse> verifyCode(String phone, String code) {
+        return null;
+    }
+
+    public Observable<SendCodeResponse> sendCode(String phone) {
+        return null;
     }
 }

@@ -1,4 +1,4 @@
-package com.enternityfintech.gold.app.widget;
+package com.enternityfintech.goldcard.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.enternityfintech.gold.app.R;
+import com.enternityfintech.goldcard.R;
 
 
 /**
@@ -47,7 +47,7 @@ public class KeyboardView extends FrameLayout implements View.OnClickListener {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.layout_pwd_keyboard, null);
         view.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams
                 .MATCH_PARENT));
-        hideView = view.findViewById(R.id.keyboard_hide);
+        //hideView = view.findViewById(R.id.keyboard_hide);
         addView(view);
         view.findViewById(R.id.keyboard_0).setOnClickListener(this);
         view.findViewById(R.id.keyboard_1).setOnClickListener(this);
@@ -122,9 +122,9 @@ public class KeyboardView extends FrameLayout implements View.OnClickListener {
 
     public interface Listener {
 
-        public void onInput(String s);
+         void onInput(String s);
 
-        public void onDelete();
+         void onDelete();
 
     }
 

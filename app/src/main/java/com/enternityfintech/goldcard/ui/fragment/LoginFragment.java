@@ -15,7 +15,7 @@ import com.enternityfintech.goldcard.ui.view.ILoginView;
 import com.enternityfintech.goldcard.widget.EditTextWithDel;
 import com.enternityfintech.goldcard.widget.PaperButton;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by cgy
@@ -24,21 +24,21 @@ import butterknife.Bind;
 public class LoginFragment extends BaseFragment<ILoginView, LoginPresenter> implements ILoginView {
 
 
-    @Bind(R.id.ivPhone)
+    @BindView(R.id.ivPhone)
     ImageView ivPhone;
-    @Bind(R.id.et_phone)
+    @BindView(R.id.et_phone)
     EditTextWithDel etPhone;
-    @Bind(R.id.rl_name)
+    @BindView(R.id.rl_name)
     RelativeLayout rlName;
-    @Bind(R.id.ivPassword)
+    @BindView(R.id.ivPassword)
     ImageView ivPassword;
-    @Bind(R.id.et_password)
+    @BindView(R.id.et_password)
     EditTextWithDel etPassword;
-    @Bind(R.id.rl_password)
+    @BindView(R.id.rl_password)
     RelativeLayout rlPassword;
-    @Bind(R.id.btLogin)
+    @BindView(R.id.btLogin)
     PaperButton btLogin;
-    @Bind(R.id.tvForget)
+    @BindView(R.id.tvForget)
     TextView tvForget;
 
 
@@ -97,29 +97,9 @@ public class LoginFragment extends BaseFragment<ILoginView, LoginPresenter> impl
         return R.layout.fragment_login;
     }
 
-    @Override
-    public void showLoading() {
-
-    }
-
-    @Override
-    public void hideLoading() {
-
-    }
-
-    @Override
-    public void showUserNameError(String error) {
-
-    }
-
-    @Override
-    public void showPassWordError(String error) {
-
-    }
 
     @Override
     public void loginSuccess() {
 
     }
-
 }

@@ -1,6 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+    
+    <com.enternityfintech.goldcard.widget.ToolBar
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="我的"
+        app:titleTextColor="@color/black"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="@drawable/mine_info_bg"
+        android:paddingBottom="@dimen/margin_b"
+        android:paddingLeft="@dimen/margin_b"
+        android:paddingRight="@dimen/margin_b">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_portrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/icon_avatar"
+            app:civ_border_width="5dp"
+            app:civ_border_color="#FEFFFE"
+             />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/padding_l"
+                android:drawableRight="@drawable/icon_qr_code"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="15503785521"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/include_mine_option" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_b"
+            android:layout_marginRight="@dimen/margin_b"
+            android:layout_marginTop="@dimen/padding_l"
+            android:paddingBottom="18dp"
+            android:background="@color/white"
+            android:paddingTop="56dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/margin_b"
+                android:drawableTop="@drawable/icon_maijinbei"
+                android:text="卖金呗"
+                android:gravity="center"
+                android:textColor="@color/content"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/margin_b"
+                android:drawableTop="@drawable/icon_jinhuigou"
+                android:gravity="center"
+                android:text="金回购"
+                android:textColor="@color/content"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/margin_b"
+                android:drawableTop="@drawable/icon_off"
+                android:gravity="center"
+                android:text="--"
+                android:textColor="@color/content"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawablePadding="@dimen/margin_b"
+                android:drawableTop="@drawable/icon_off"
+                android:text="--"
+                android:textColor="@color/content"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_l"
+            android:layout_marginTop="@dimen/margin_large"
+            android:src="@drawable/tab_product" />
+
+    </RelativeLayout>
+
 
 </LinearLayout>

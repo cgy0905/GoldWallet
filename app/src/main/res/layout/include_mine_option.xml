@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_b"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/tv_notification"
+        style="@style/OptionItem"
+        android:layout_marginTop="@dimen/padding_l"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableStart="@drawable/icon_notification"
+        android:text="@string/message_notification"
+        android:textColor="@color/title" />
+
+    <View
+        style="@style/Line.H"
+        android:layout_marginStart="@dimen/margin_b" />
+
+    <TextView
+        android:id="@+id/tv_auth"
+        style="@style/OptionItem"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableStart="@drawable/icon_authentication"
+        android:text="@string/authentication"
+        android:textColor="@color/title" />
+
+
+    <TextView
+        android:id="@+id/tv_account"
+        style="@style/OptionItem"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableStart="@drawable/icon_account"
+        android:text="@string/safety_account"
+        android:textColor="@color/title" />
+
+    <TextView
+        android:id="@+id/tv_settings"
+        style="@style/OptionItem"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableStart="@drawable/icon_settings"
+        android:text="@string/settings"
+        android:textColor="@color/title" />
 
 </LinearLayout>
