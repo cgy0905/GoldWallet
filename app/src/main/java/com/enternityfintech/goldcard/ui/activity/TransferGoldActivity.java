@@ -1,15 +1,17 @@
 package com.enternityfintech.goldcard.ui.activity;
 
+import android.os.Bundle;
+
 import com.enternityfintech.goldcard.R;
 import com.enternityfintech.goldcard.ui.base.BaseActivity;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
 
-/**
- * Created by cgy
- * 2018/6/25  14:44
- */
-public class TurnGoldActivity extends BaseActivity{
+public class TransferGoldActivity extends BaseActivity {
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     protected BasePresenter createPresenter() {
@@ -18,6 +20,6 @@ public class TurnGoldActivity extends BaseActivity{
 
     @Override
     protected int provideContentViewId() {
-        return R.layout.activity_turn_gold;
+        return R.layout.activity_transfer_gold;
     }
 }

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_b"
+        android:text="@string/gold_card_select"
+        android:textColor="@color/title"
+        android:textSize="@dimen/content_b" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/margin_b"
+        tools:ignore="RtlSymmetry">
+
+        <CheckBox
+            android:id="@+id/cb_gram_100"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/padding_m"
+            android:drawableStart="@drawable/selector_checkbox"
+            android:padding="@dimen/margin_b"
+            android:text="@string/gram_100"
+            android:textColor="@color/selector_text_checked_red"
+            android:textSize="21sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tv_gram_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_b"
+            android:layout_marginStart="@dimen/margin_b"
+            android:text="@string/piece_count"
+            android:textSize="13sp" />
+
+        <com.enternityfintech.goldcard.widget.AmountView
+            android:id="@+id/add_sub_gram_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        style="@style/Line"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="41dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/margin_b"
+        tools:ignore="RtlSymmetry">
+
+        <CheckBox
+            android:id="@+id/cb_gram_200"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/padding_m"
+            android:drawableStart="@drawable/selector_checkbox"
+            android:padding="@dimen/margin_b"
+            android:text="@string/gram_200"
+            android:textColor="@color/selector_text_checked_red"
+            android:textSize="21sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tv_gram_200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_b"
+            android:layout_marginStart="@dimen/margin_b"
+            android:text="@string/piece_count"
+            android:textSize="13sp" />
+
+        <com.enternityfintech.goldcard.widget.AmountView
+            android:id="@+id/add_sub_gram_200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        style="@style/Line"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="41dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/margin_b"
+        tools:ignore="RtlSymmetry">
+
+        <CheckBox
+            android:id="@+id/cb_gram_500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/padding_m"
+            android:drawableStart="@drawable/selector_checkbox"
+            android:padding="@dimen/margin_b"
+            android:text="@string/gram_500"
+            android:textColor="@color/selector_text_checked_red"
+            android:textSize="21sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tv_gram_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_b"
+            android:layout_marginStart="@dimen/margin_b"
+            android:text="@string/piece_count"
+            android:textSize="13sp" />
+
+        <com.enternityfintech.goldcard.widget.AmountView
+            android:id="@+id/add_sub_gram_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

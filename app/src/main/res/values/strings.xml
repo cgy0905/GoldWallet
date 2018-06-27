@@ -51,8 +51,6 @@
     <string name="incorrect_phone_format">手机号格式不正确</string>
 
 
-
-
     <!--我-->
     <string name="message_notification">消息通知</string>
     <string name="authentication">身份认证</string>
@@ -108,5 +106,21 @@
     <string name="vertify_code_not_empty">验证码不能为空</string>
     <string name="send_code_btn_normal_tip">重新发送</string>
 
+    <!--交易-->
+    <string name="all">全部</string>
+    <string name="trade_detail">交易详情</string>
+    <string name="operating_deck">操作平台</string>
+    <string name="shift_to_account">转入账户</string>
+    <string name="publisher">发行商:%1$s</string>
+    <string name="issue">发行时间：%1$s</string>
+    <string name="keep_place">保管地：%1$s</string>
 
+    <string name="transfer_gold">转金</string>
+    <string name="collect_account_input">请填写收金账户</string>
+    <string name="collect_account_check">请仔细核对收金账户信息</string>
+    <string name="gram_100">100克</string>
+    <string name="gram_200">200克</string>
+    <string name="gram_500">500克</string>
+    <string name="piece_count">共%1$d张</string>
+    <string name="gold_card_select">选择要转的黄金卡</string>
 </resources>
