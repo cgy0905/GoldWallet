@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by cgy
@@ -16,6 +17,7 @@ import butterknife.ButterKnife;
 public abstract class BaseFragment<V, T extends BasePresenter<V>> extends LazyLoadFragment{
 
     protected T mPresenter;
+    Unbinder unbinder;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,6 +57,7 @@ public abstract class BaseFragment<V, T extends BasePresenter<V>> extends LazyLo
         if (mPresenter != null) {
             mPresenter.detachView();
         }
+        unbinder.unbind();
     }
     public void init() {
 

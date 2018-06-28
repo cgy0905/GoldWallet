@@ -3,7 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.enternityfintech.goldcard.widget.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/actionBarSize"
+        app:titleTextColor="@color/white"
+        app:backDrawable="@drawable/icon_back"/>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,35 +24,11 @@
             android:layout_height="match_parent"
             android:background="@color/background_color"
             android:orientation="vertical">
-
-            <android.support.design.widget.AppBarLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/home_top_bg"
                 android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="17dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="黄金卡"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/content" />
-
-                    <ImageView
-                        android:layout_width="19dp"
-                        android:layout_height="19dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="@dimen/margin_b"
-                        android:src="@drawable/icon_scan_code" />
-
-                </RelativeLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -138,13 +124,11 @@
                     </LinearLayout>
                 </LinearLayout>
 
-            </android.support.design.widget.AppBarLayout>
+            </LinearLayout>
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="-35dp">
-
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -212,9 +196,11 @@
                         android:orientation="vertical"
                         android:paddingLeft="@dimen/padding_l"
                         android:paddingRight="@dimen/padding_l"
-                        android:paddingTop="@dimen/margin">
+                        android:paddingTop="@dimen/margin"
+                        android:paddingBottom="23dp">
 
                         <RelativeLayout
+                            android:id="@+id/rl_hold_standard"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
@@ -279,6 +265,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </FrameLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

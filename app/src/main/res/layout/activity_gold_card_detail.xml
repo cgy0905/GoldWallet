@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <com.enternityfintech.goldcard.widget.ToolBar
+    <com.enternityfintech.goldcard.widget.TitleBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:titleText="详情" />

@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/windowBackground">
 
-    <com.enternityfintech.goldcard.widget.ToolBar
+    <com.enternityfintech.goldcard.widget.TitleBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:titleText="@string/about_us"/>
@@ -30,6 +30,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"/>
         <TextView
+            android:id="@+id/tv_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/version_code"

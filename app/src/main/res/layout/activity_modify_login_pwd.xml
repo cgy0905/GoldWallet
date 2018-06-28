@@ -35,7 +35,8 @@
             android:paddingLeft="@dimen/padding"
             android:paddingRight="@dimen/margin_large"
             app:clearIconDrawable="@drawable/btn_cancel"
-            app:clearIconGravity="right|center_vertical"/>
+            app:clearIconGravity="right|center_vertical"
+            android:background="@null"/>
     </LinearLayout>
 
     <View
@@ -67,6 +68,7 @@
             android:hint="请输入新密码"
             android:paddingLeft="@dimen/padding"
             android:paddingRight="@dimen/margin_large"
+            android:background="@null"
             app:clearIconDrawable="@drawable/btn_cancel"
             app:clearIconGravity="right|center_vertical"/>
     </LinearLayout>
@@ -101,7 +103,8 @@
             android:paddingLeft="@dimen/padding"
             android:paddingRight="@dimen/margin_large"
             app:clearIconDrawable="@drawable/btn_cancel"
-            app:clearIconGravity="right|center_vertical"/>
+            app:clearIconGravity="right|center_vertical"
+            android:background="@null"/>
     </LinearLayout>
 
     <View
@@ -126,7 +129,7 @@
         android:gravity="center_vertical|right"
         android:onClick="onForgetPwd"
         android:padding="@dimen/padding"
-        android:text="忘记旧密码"
+        android:text="@string/forget_old_pwd"
         android:textColor="@color/selector_text_gold"
         android:textSize="16sp" />
 

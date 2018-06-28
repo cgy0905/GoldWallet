@@ -1,4 +1,4 @@
-package com.enternityfintech.gold.app.util;
+package com.enternityfintech.goldcard.widget;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,9 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
-import com.enternityfintech.gold.app.R;
-import com.enternityfintech.gold.app.listener.OnImagePickListener;
-import com.enternityfintech.gold.app.util.dialog.ToastHelper;
+import com.enternityfintech.goldcard.R;
+import com.enternityfintech.goldcard.listener.OnImagePickListener;
+import com.enternityfintech.goldcard.utils.FileUtils;
+import com.enternityfintech.goldcard.utils.UIUtils;
 import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
@@ -108,7 +109,7 @@ public class ImagePicker {
                 .onDenied(new Action() {
                     @Override
                     public void onAction(List<String> permissions) {
-                        ToastHelper.showToast(activity, "拍照需要相机权限");
+                        UIUtils.showToast("拍照需要先开启相机权限");
                     }
                 })
                 .start();
@@ -126,7 +127,7 @@ public class ImagePicker {
                 .onDenied(new Action() {
                     @Override
                     public void onAction(List<String> permissions) {
-                        ToastHelper.showToast(activity, "访问相册需要读写存储权限");
+                        UIUtils.showToast( "访问相册需要读写存储权限");
                     }
                 })
                 .start();
@@ -135,7 +136,7 @@ public class ImagePicker {
     private void showPick() {
         final BottomSheetDialog dialog = new BottomSheetDialog(activity, R.style.BottomDialog);
         View dialogView = LayoutInflater.from(activity)
-                .inflate(R.layout.layout_photo, null);
+                .inflate(R.layout.dialog_head_protrait, null);
         dialogView.findViewById(R.id.btn_photo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -198,7 +199,7 @@ public class ImagePicker {
                         Uri uri = data.getData();
                         if (uri != null) {
                             if (mIsRequestPath) {
-                                String path = Util.getImageAbsolutePath(activity, uri);
+                                String path = FileUtils.getImageAbsolutePath(activity, uri);
                                 listener.onPickerResult(path, mRequestCode);
                             } else {
                                 Bitmap bitmap = decodeUriAsBitmap(data.getData());
@@ -219,7 +220,7 @@ public class ImagePicker {
                 } else {
                     if (imageUri != null) {
                         if (mIsRequestPath) {
-                            String path = Util.getImageAbsolutePath(activity, imageUri);
+                            String path = FileUtils.getImageAbsolutePath(activity, imageUri);
                             listener.onPickerResult(path, mRequestCode);
                         } else {
                             Bitmap bitmap = decodeUriAsBitmap(imageUri);
@@ -236,7 +237,7 @@ public class ImagePicker {
             case CROP_SMALL_PICTURE: {
                 if (imageUri != null) {
                     if (mIsRequestPath) {
-                        String path = Util.getImageAbsolutePath(activity, imageUri);
+                        String path = FileUtils.getImageAbsolutePath(activity, imageUri);
                         listener.onPickerResult(path, mRequestCode);
                     } else {
                         Bitmap bitmap = decodeUriAsBitmap(imageUri);
@@ -255,7 +256,7 @@ public class ImagePicker {
     private void cropImageCarmera(Uri uri) {
         Intent intent = new Intent("com.android.camera.action.CROP");
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            String pau = Util.getImageAbsolutePath(activity, uri);
+            String pau = FileUtils.getImageAbsolutePath(activity, uri);
             intent.setDataAndType(Uri.fromFile(new File(pau)), "image/*");
         } else {
             intent.setDataAndType(uri, "image/*");

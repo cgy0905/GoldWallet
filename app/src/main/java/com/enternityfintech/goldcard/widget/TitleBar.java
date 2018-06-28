@@ -22,78 +22,94 @@ import com.enternityfintech.goldcard.R;
  * 2018/6/20  9:18
  * 公共的标题栏
  */
-public class ToolBar extends Toolbar {
+public class TitleBar extends Toolbar {
 
     private ImageView ivBack, ivMenu;
     private TextView tvTitle;
     private View view;
 
-    public ToolBar(Context context) {
+    public TitleBar(Context context) {
         this(context, null);
     }
 
-    public ToolBar(Context context, AttributeSet attrs) {
+    public TitleBar(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
     @SuppressLint("RestrictedApi")
-    public ToolBar(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TitleBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
 
         initView();
 
+        setContentInsetsRelative(0,0);
 
         if (attrs != null) {
-            final TintTypedArray ta = TintTypedArray.obtainStyledAttributes(getContext(),attrs, R.styleable.ToolBar, defStyleAttr, 0);
+            //读取attr属性
+            final TintTypedArray ta = TintTypedArray.obtainStyledAttributes(context, attrs, R.styleable.TitleBar, defStyleAttr, 0);
 
-            Drawable leftIcon = ta.getDrawable(R.styleable.ToolBar_leftBackground);
+            Drawable leftIcon = ta.getDrawable(R.styleable.TitleBar_leftBackground);
             if (ivBack != null) {
                 setLeftImageView(leftIcon);
             }
-            Drawable rightIcon = ta.getDrawable(R.styleable.ToolBar_rightBackground);
+            Drawable rightIcon = ta.getDrawable(R.styleable.TitleBar_rightBackground);
             if (ivMenu != null) {
                 setRightImageView(rightIcon);
             }
-            String title = ta.getString(R.styleable.ToolBar_titleText);
-            float titleTextSize = ta.getDimension(R.styleable.ToolBar_titleTextSize, 14);
-            int titleTextColor = ta.getColor(R.styleable.ToolBar_titleTextColor, Color.parseColor("#333333"));
+            String title = ta.getString(R.styleable.TitleBar_titleText);
+            float titleTextSize = ta.getDimension(R.styleable.TitleBar_titleTextSize, 14);
+            int titleTextColor = ta.getColor(R.styleable.TitleBar_titleTextColor, Color.parseColor("#333333"));
             if (tvTitle != null) {
                 tvTitle.setText(title);
                 tvTitle.setTextSize(titleTextSize);
                 tvTitle.setTextColor(titleTextColor);
             }
-            Boolean leftState = ta.getBoolean(R.styleable.ToolBar_leftState, true);
-            Boolean rightState = ta.getBoolean(R.styleable.ToolBar_rightState, true);
-            if (ivBack != null) {
-                ivBack.setVisibility(leftState == true ? VISIBLE : INVISIBLE);
+            Boolean leftState = ta.getBoolean(R.styleable.TitleBar_leftState, false);
+            Boolean rightState = ta.getBoolean(R.styleable.TitleBar_rightState, false);
+            if (leftState) {
+                //ivBack.setVisibility(leftState == true ? VISIBLE : INVISIBLE);
+                showLeftImageView();
             }
-            if (ivMenu != null) {
-                ivMenu.setVisibility(rightState == true ? View.VISIBLE : View.INVISIBLE);
+            if (rightState) {
+                //ivMenu.setVisibility(rightState == true ? View.VISIBLE : View.INVISIBLE);
+                showRightImageView();
             }
             ta.recycle();
         }
     }
 
-    private void setRightImageView(Drawable rightIcon) {
+    private void showRightImageView() {
+        if (ivMenu != null) {
+            ivMenu.setVisibility(VISIBLE);
+        }
+    }
+
+    public void showLeftImageView() {
+        if (ivBack != null) {
+            ivBack.setVisibility(VISIBLE);
+        }
+    }
+
+    public void setRightImageView(Drawable rightIcon) {
         if (ivMenu != null) {
             ivMenu.setBackground(rightIcon);
         }
     }
 
-    private void setLeftImageView(Drawable leftIcon) {
+    public void setLeftImageView(Drawable leftIcon) {
         if (ivBack != null) {
             ivBack.setBackground(leftIcon);
             ivBack.setVisibility(VISIBLE);
         }
     }
-    private void setRightImageView(int resId) {
+    public void setRightImageView(int resId) {
         setRightImageView(getResources().getDrawable(resId));
     }
 
     private void initView() {
         if (view == null) {
-            view = LayoutInflater.from(getContext()).inflate(R.layout.include_titlebar, this);
+            view = LayoutInflater.from(getContext()).inflate(R.layout.include_titlebar, null);
             ivBack = findViewById(R.id.iv_back);
             tvTitle = findViewById(R.id.tv_title);
             ivMenu = findViewById(R.id.iv_menu);

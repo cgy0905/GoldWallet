@@ -2,11 +2,9 @@
 
     <!-- Base application theme. -->
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTheme.Translucent" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
         <!-- 设置activity切换动画 -->
         <item name="android:windowAnimationStyle">@style/activityAnimation</item>
     </style>
@@ -19,13 +17,6 @@
         <item name="android:windowAnimationStyle">@style/activityAnimation</item>
     </style>
 
-    <!--无ActionBar样式-->
-    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <!-- 设置activity切换动画 -->
-        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
-    </style>
-
     <!-- animation 样式 -->
     <style name="activityAnimation" parent="@android:style/Animation">
         <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
@@ -34,108 +25,4 @@
         <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
     </style>
 
-    <!--圆角Dialog-->
-    <style name="MyDialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:backgroundDimAmount">0.6</item>
-    </style>
-
-    <!--自定义CheckBox样式-->
-    <!--<style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">-->
-        <!--<item name="android:button">@drawable/checkbox_style</item>-->
-    <!--</style>-->
-
-    <style name="TextViewContentStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/title</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
-
-    <style name="TextViewContent" parent="TextViewContentStyle">
-        <item name="android:textColor">@color/bg_Gray</item>
-        <item name="android:textSize">12sp</item>
-    </style>
-
-    <style name="Keyboard">
-
-            <item name="android:textSize">24dp</item>
-            <item name="android:gravity">center</item>
-            <item name="android:background">@drawable/selector_keyboard_bg</item>
-            <item name="android:textColor">@color/black</item>
-    </style>
-
-    <!--实下滑线样式-->
-    <style name="Line">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0.5dp</item>
-        <item name="android:background">@color/line_color</item>
-    </style>
-
-    <style name="HomeRedLine">
-        <item name="android:layout_width">3dp</item>
-        <item name="android:layout_height">12dp</item>
-        <item name="android:background">@drawable/shape_home_line_bg</item>
-    </style>
-
-    <!--选项条目样式-->
-    <!--<style name="OptionItem">-->
-        <!--<item name="android:layout_width">match_parent</item>-->
-        <!--<item name="android:layout_height">102px</item>-->
-        <!--<item name="android:background">@color/white</item>-->
-    <!--</style>-->
-
-
-    <style name="OptionItem">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">46dp</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingStart">@dimen/margin_b</item>
-        <item name="android:paddingEnd">@dimen/margin_b</item>
-        <item name="android:orientation">horizontal</item>
-        <item name="android:drawablePadding">@dimen/padding_l</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:background">@drawable/selector_option_white</item>
-    </style>
-
-    <style name="OptionItem.Center">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">45dp</item>
-        <item name="android:gravity">center</item>
-    </style>
-
-    <style name="OptionItemBg" parent="OptionItem">
-        <item name="android:background">@drawable/selector_option_white</item>
-    </style>
-
-    <style name="OptionItemBg.Center" parent="OptionItem.Center">
-        <item name="android:background">@drawable/selector_option_white</item>
-    </style>
-
-    <style name="OptionItemBg.Center.Corner" parent="OptionItem.Center">
-        <item name="android:background">@drawable/selector_option_white_corner</item>
-    </style>
-
-    <style name="Line.H">
-        <item name="android:layout_width">match_parent</item>
-    </style>
-    
-    <style name="Detail_LeftTextView_Style">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/content_s</item>
-        <item name="android:textColor">@color/light_gray</item>
-    </style>
-
-    <style name="Detail_RightTextView_Style" parent="Detail_LeftTextView_Style">
-        <item name="android:textSize">@dimen/content</item>
-        <item name="android:textColor">@color/title</item>
-    </style>
 </resources>

@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <com.enternityfintech.goldcard.widget.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="我的二维码" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_l"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:background="@color/white"
+        android:padding="72dp">
+        
+        
+        
+        <ImageView
+            android:layout_width="203dp"
+            android:layout_height="203dp"
+            android:src="@drawable/icon_scan_code"/>
+
+    </LinearLayout>
 
 </LinearLayout>

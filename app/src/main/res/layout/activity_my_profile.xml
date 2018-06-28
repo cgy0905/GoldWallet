@@ -18,8 +18,8 @@
         android:background="@color/white"
         android:padding="@dimen/margin_b">
 
-        <com.enternityfintech.goldcard.widget.roundimage.RoundImageView
-            android:id="@+id/iv_head"
+        <ImageView
+            android:id="@+id/iv_portrait"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginEnd="@dimen/margin_large"
@@ -32,7 +32,7 @@
             android:id="@+id/tv_real_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/iv_head"
+            android:layout_toEndOf="@id/iv_portrait"
             android:textColor="@color/title"
             android:textSize="@dimen/title_s" />
 
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_real_name"
             android:layout_marginTop="@dimen/padding_s"
-            android:layout_toEndOf="@id/iv_head"/>
+            android:layout_toEndOf="@id/iv_portrait"/>
 
         <TextView
             android:id="@+id/tv_tip"
@@ -67,7 +67,6 @@
             android:id="@+id/rvNick">
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/content"
@@ -75,7 +74,7 @@
                 android:text="昵称" />
 
             <TextView
-                android:id="@+id/tv_name"
+                android:id="@+id/tv_nick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

@@ -22,6 +22,17 @@
         </activity>
         <activity android:name=".ui.activity.WebViewActivity" />
         <activity android:name=".ui.activity.LoginActivity"></activity>
+        <activity android:name=".ui.activity.MessageActivity" />
+        <activity android:name=".ui.activity.MyProfileActivity" />
+        <activity android:name=".ui.activity.IdentityActivity" />
+        <activity android:name=".ui.activity.AccountSafetyActivity" />
+        <activity android:name=".ui.activity.SettingsActivity" />
+        <activity android:name=".ui.activity.GoldCardDetailActivity" />
+        <activity android:name=".ui.activity.AboutUsActivity" />
+        <activity android:name=".ui.activity.ForgetPasswordActivity" />
+        <activity android:name=".ui.activity.HoldActivity" />
+        <activity android:name=".ui.activity.ModifyLoginPwdActivity" />
+        <activity android:name=".ui.activity.ModifyNickActivity" />
     </application>
 
 </manifest>

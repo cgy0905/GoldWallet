@@ -48,7 +48,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/rl_menu_contactus"
+            android:id="@+id/tv_contact_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/arrow_right"
@@ -60,13 +60,14 @@
         <View style="@style/Line" />
 
         <RelativeLayout
-            android:id="@+id/rl_menu_hotline"
+            android:id="@+id/rl_menu_hotLine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/selector_simple_half"
             android:padding="@dimen/margin_b">
 
             <TextView
+                android:id="@+id/tv_hotLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -105,7 +106,7 @@
             android:textColor="@color/title" />
 
         <TextView
-            android:id="@+id/rl_menu_comment"
+            android:id="@+id/tv_comment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_l"

@@ -63,4 +63,6 @@ public class BasePresenter<V> {
         }
     }
 
+    public void updateUserInfo() {
+    }
 }

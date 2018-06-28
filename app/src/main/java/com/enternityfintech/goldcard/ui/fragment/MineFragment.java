@@ -9,6 +9,7 @@ import com.enternityfintech.goldcard.ui.activity.AccountSafetyActivity;
 import com.enternityfintech.goldcard.ui.activity.IdentityActivity;
 import com.enternityfintech.goldcard.ui.activity.MessageActivity;
 import com.enternityfintech.goldcard.ui.activity.MyProfileActivity;
+import com.enternityfintech.goldcard.ui.activity.MyQrCodeActivity;
 import com.enternityfintech.goldcard.ui.activity.SettingsActivity;
 import com.enternityfintech.goldcard.ui.base.BaseFragment;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
@@ -24,10 +25,12 @@ public class MineFragment extends BaseFragment {
 
     @BindView(R.id.iv_portrait)
     CircleImageView ivPortrait;
-    @BindView(R.id.tvName)
+    @BindView(R.id.tv_name)
     TextView tvName;
-    @BindView(R.id.tvPhone)
+    @BindView(R.id.tv_phone)
     TextView tvPhone;
+    @BindView(R.id.iv_qr_Code)
+    TextView ivQrCode;
     @BindView(R.id.tv_notification)
     TextView tvNotification;
     @BindView(R.id.tv_auth)
@@ -46,7 +49,6 @@ public class MineFragment extends BaseFragment {
         return mineFragment;
     }
 
-
     @Override
     protected BasePresenter createPresenter() {
         return null;
@@ -64,5 +66,6 @@ public class MineFragment extends BaseFragment {
         tvAuth.setOnClickListener(v -> ((MainActivity)getActivity()).jumpToActivity(IdentityActivity.class));
         tvAccount.setOnClickListener(v -> ((MainActivity)getActivity()).jumpToActivity(AccountSafetyActivity.class));
         tvSettings.setOnClickListener(v -> ((MainActivity)getActivity()).jumpToActivity(SettingsActivity.class));
+        ivQrCode.setOnClickListener(v -> ((MainActivity)getActivity()).jumpToActivity(MyQrCodeActivity.class));
     }
 }
