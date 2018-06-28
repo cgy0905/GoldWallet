@@ -1,7 +1,6 @@
 <resources>
 
     <!-- Base application theme. -->
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -9,6 +8,38 @@
         <item name="colorAccent">@color/colorAccent</item>
         <!-- 设置activity切换动画 -->
         <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:editTextStyle">@style/Widget.Client.EditText</item>
+        <item name="editTextStyle">@style/Widget.Client.EditText</item>
+        <item name="android:textViewStyle">@style/Widget.Client.TextView</item>
+        <item name="android:buttonStyle">@style/Widget.Client.Button</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:actionBarSize">?android:attr/action</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Widget.Client.TextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:textSize">@dimen/content</item>
+        <item name="android:textColor">@color/content</item>
+    </style>
+
+    <style name="Widget.Client.EditText" parent="android:Widget.Holo.Light.EditText">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/title</item>
+        <item name="android:textSize">@dimen/content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="Widget.Client.Button" parent="android:Widget.Holo.Light.Button">
+        <item name="android:textSize">@dimen/content_b</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/selector_button</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

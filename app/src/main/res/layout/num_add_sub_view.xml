@@ -2,40 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:focusable="true"
-    android:background="@drawable/shape_amount_layout_bg"
-    android:divider="@drawable/shape_num_add_sub_divider"
-    android:orientation="horizontal"
-    android:showDividers="middle">
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnDecrease"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+    <com.enternityfintech.goldcard.widget.StatedImageView
+        android:id="@+id/iv_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:minWidth="30dp"
+        android:scaleType="center"
+        android:src="@drawable/icon_sub" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:background="@color/windowBackground"
         android:gravity="center"
-        android:background="@drawable/selector_btn_amount"
-        android:text="-"/>
-
-    <EditText
-        android:id="@+id/etAmount"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
         android:minWidth="40dp"
-        android:layout_weight="2"
-        android:background="@null"
-        android:inputType="number"
-        android:gravity="center"
-        android:text="1"/>
+        android:text="0" />
 
-    <Button
-        android:id="@+id/btnIncrease"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:background="@drawable/selector_btn_amount"
-        android:text="+"/>
-
+    <com.enternityfintech.goldcard.widget.StatedImageView
+        android:id="@+id/iv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:minWidth="30dp"
+        android:scaleType="center"
+        android:src="@drawable/icon_add" />
 
 </LinearLayout>
