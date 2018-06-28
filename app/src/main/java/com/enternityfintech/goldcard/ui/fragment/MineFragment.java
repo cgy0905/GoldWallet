@@ -1,6 +1,7 @@
 package com.enternityfintech.goldcard.ui.fragment;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.MainActivity;
@@ -30,7 +31,7 @@ public class MineFragment extends BaseFragment {
     @BindView(R.id.tv_phone)
     TextView tvPhone;
     @BindView(R.id.iv_qr_Code)
-    TextView ivQrCode;
+    ImageView ivQrCode;
     @BindView(R.id.tv_notification)
     TextView tvNotification;
     @BindView(R.id.tv_auth)

@@ -2,22 +2,16 @@ package com.enternityfintech.goldcard.ui.base;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.app.MyApp;
 import com.enternityfintech.goldcard.ui.activity.WebViewActivity;
 import com.enternityfintech.goldcard.widget.CustomDialog;
 
@@ -28,7 +22,7 @@ import me.drakeet.materialdialog.MaterialDialog;
  * Created by cgy
  * 2018/6/14  14:23
  */
-public abstract class BaseActivity<V, T extends  BasePresenter<V>> extends AppCompatActivity{
+public abstract class BaseActivity<V, T extends  BasePresenter<V>> extends BaseStatusBarActivity{
     protected T mPresenter;
     private CustomDialog mDialogWaiting;
     private MaterialDialog mMaterialDialog;
@@ -37,7 +31,8 @@ public abstract class BaseActivity<V, T extends  BasePresenter<V>> extends AppCo
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MyApp.activities.add(this);
+        //FIXME 这里会导致内存泄漏
+        //MyApp.activities.add(this);
         init();
 
         //判断是否使用MVP模式
@@ -45,24 +40,6 @@ public abstract class BaseActivity<V, T extends  BasePresenter<V>> extends AppCo
         if (mPresenter != null) {
             mPresenter.attachView((V) this); //因为之后所有的子类都要事先对应的View接口
         }
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (isTranslucentStatusBar()){
-                Window window = getWindow();
-                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
-                        | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-                window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(Color.TRANSPARENT);
-                window.setNavigationBarColor(Color.TRANSPARENT);
-            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
-                //4.4 全透明状态栏（有的机子是过渡形式的透明）
-                getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-                getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-            }
-            }
 
 
         //子类不再需要设置布局ID，也不再需要使用ButterKnife.bind()

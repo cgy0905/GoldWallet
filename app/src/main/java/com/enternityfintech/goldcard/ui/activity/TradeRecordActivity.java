@@ -3,6 +3,7 @@ package com.enternityfintech.goldcard.ui.activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,7 @@ public class TradeRecordActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new TradeRecordAdapter(mockData()));
     }
 
@@ -56,11 +58,11 @@ public class TradeRecordActivity extends BaseActivity {
         Calendar calendar = Calendar.getInstance();
         for (int i = 0; i < size; i++) {
             Data data = new Data();
-            data.month = calendar.toString();
+            data.month = calendar.getTime().toString();
             ArrayList<Data.Item> items = new ArrayList<>();
             for (int j = 0; j < item; j++) {
                 Data.Item di = new Data.Item();
-                di.date = calendar.toString();
+                di.date = calendar.getTime().toString();
                 di.icon = icons[random.nextInt(icons.length)];
                 di.title = "类型";
                 di.weight = "+" + random.nextInt(1000) + "克";

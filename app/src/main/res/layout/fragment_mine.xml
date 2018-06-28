@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background_color"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <com.enternityfintech.goldcard.widget.TitleBar
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleText="我的"
-        app:titleTextColor="@color/white"
-        app:leftState="false"
-        app:rightState="false" />
+        android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:background="@drawable/mine_info_bg"
+            android:paddingLeft="@dimen/margin_b"
+            android:paddingRight="@dimen/margin_b">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/actionBarSize"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/mine"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/mine_info_bg"
-                android:paddingBottom="@dimen/margin_b"
-                android:paddingLeft="@dimen/margin_b"
-                android:paddingRight="@dimen/margin_b">
+                android:layout_centerVertical="true"
+                android:paddingTop="60dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iv_portrait"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="40dp"
                     android:src="@drawable/icon_avatar"
                     app:civ_border_color="#FEFFFE"
                     app:civ_border_width="5dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center_vertical"
-                    android:orientation="vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
                     <TextView
                         android:id="@+id/tv_name"
                         android:layout_width="wrap_content"
@@ -64,28 +63,28 @@
                         android:textColor="@color/white"
                         android:textSize="22sp"
                         android:textStyle="bold" />
-                        <ImageView
-                            android:id="@+id/iv_qr_Code"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/icon_qr_code"
-                            android:layout_marginLeft="@dimen/padding"/>
-                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/tv_phone"
+                    <ImageView
+                        android:id="@+id/iv_qr_Code"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:textColor="@color/white"
-                        android:textSize="13sp"
-                        android:layout_marginTop="@dimen/padding_l"/>
+                        android:layout_marginLeft="@dimen/padding"
+                        android:src="@drawable/icon_qr_code" />
                 </LinearLayout>
-            </RelativeLayout>
 
-            <include layout="@layout/include_mine_option" />
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/padding_l"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RelativeLayout>
 
-            <include layout="@layout/include_mine_bottom" />
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+        <include layout="@layout/include_mine_option" />
+
+        <include layout="@layout/include_mine_bottom" />
+    </LinearLayout>
+</ScrollView>
