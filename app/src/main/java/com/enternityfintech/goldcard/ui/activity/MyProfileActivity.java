@@ -27,8 +27,8 @@ public class MyProfileActivity extends BaseActivity {
 
     @BindView(R.id.titleView)
     TitleView titleView;
-    @BindView(R.id.iv_head)
-    ImageView ivHead;
+    @BindView(R.id.iv_portrait)
+    ImageView ivPortrait;
     @BindView(R.id.tv_real_name)
     TextView tvRealName;
     @BindView(R.id.tv_phone)
@@ -43,8 +43,6 @@ public class MyProfileActivity extends BaseActivity {
     TextView tvGender;
     @BindView(R.id.rvGender)
     RelativeLayout rvGender;
-    @BindView(R.id.iv_portrait)
-    ImageView ivPortrait;
 
     @Override
     protected BasePresenter createPresenter() {

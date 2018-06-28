@@ -20,12 +20,6 @@ public class SettingsActivity extends BaseActivity {
     TextView tvContactUs;
     @BindView(R.id.tv_hotLine)
     TextView tvHotLine;
-    @BindView(R.id.rl_menu_hotline)
-    RelativeLayout rlMenuHotline;
-    @BindView(R.id.tv_feedback)
-    TextView tvFeedback;
-    @BindView(R.id.rl_menu_comment)
-    TextView tvComment;
 
     @Override
     protected BasePresenter createPresenter() {
