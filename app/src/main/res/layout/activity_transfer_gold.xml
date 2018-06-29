@@ -7,10 +7,10 @@
     android:orientation="vertical"
     tools:context=".ui.activity.TransferGoldActivity">
 
-    <com.enternityfintech.goldcard.widget.ToolBar
+    <com.enternityfintech.goldcard.widget.TitleView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleText="@string/transfer_gold" />
+        app:title="@string/transfer_gold" />
 
     <LinearLayout
         android:layout_width="match_parent"
