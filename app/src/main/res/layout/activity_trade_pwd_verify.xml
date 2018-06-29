@@ -51,8 +51,8 @@
                 android:background="@drawable/shape_border_gray_only"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_code"
+                <EditText
+                    android:id="@+id/et_code"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -86,12 +86,10 @@
                 android:id="@+id/btn_submit"
                 android:layout_width="match_parent"
                 android:layout_marginTop="@dimen/margin_large"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_b"
                 android:layout_marginRight="@dimen/margin_b"
                 android:background="@drawable/selector_button_card_corner"
-                android:enabled="false"
-                android:onClick="submitVerifyCode"
                 android:text="@string/submit"
                 android:textColor="@color/white" />
 

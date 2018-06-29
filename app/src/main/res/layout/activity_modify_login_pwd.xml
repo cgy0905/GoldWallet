@@ -28,7 +28,7 @@
             app:icon="@drawable/icon_password_off"
             app:text="@string/old" />
         <com.enternityfintech.goldcard.widget.ClearableEditText
-            android:id="@+id/et_oldpass"
+            android:id="@+id/et_old_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入旧密码"
@@ -62,7 +62,7 @@
             app:text="@string/text_new" />
 
         <com.enternityfintech.goldcard.widget.ClearableEditText
-            android:id="@+id/et_newpass"
+            android:id="@+id/et_new_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请输入新密码"
@@ -96,7 +96,7 @@
             app:text="@string/text_new" />
 
         <com.enternityfintech.goldcard.widget.ClearableEditText
-            android:id="@+id/et_repass"
+            android:id="@+id/et_sure_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="请再次输入新密码"
@@ -115,6 +115,7 @@
         android:background="@color/divider" />
 
     <com.enternityfintech.goldcard.widget.StatedImageView
+        android:id="@+id/btn_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -122,12 +123,12 @@
         android:src="@drawable/btn_submit" />
 
     <Button
+        android:id="@+id/btn_forget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@color/transparent"
         android:gravity="center_vertical|right"
-        android:onClick="onForgetPwd"
         android:padding="@dimen/padding"
         android:text="@string/forget_old_pwd"
         android:textColor="@color/selector_text_gold"

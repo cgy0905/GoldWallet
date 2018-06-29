@@ -10,7 +10,7 @@
         android:id="@+id/titleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="@string/trade_password_setting" />
+        app:title="@string/modify_trade_pwd" />
 
     <TextView
         android:id="@+id/tv_tip"
@@ -30,6 +30,7 @@
         android:layout_margin="@dimen/margin_large"
         android:layout_marginTop="20dp"
         android:background="@color/transparent"
+        android:focusable="true"
         app:borderColor="@color/board_gray"
         app:borderWidth="1dp"
         app:codeColor="@color/black"

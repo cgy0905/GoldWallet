@@ -55,10 +55,16 @@ public class MyProfileActivity extends BaseActivity {
     }
 
     @Override
+    public void initView() {
+        imagePicker = new ImagePicker(this);
+        imagePicker.setOutput(300, 300);
+    }
+
+    @Override
     public void initListener() {
         rvNick.setOnClickListener(v -> {
             Intent intent = new Intent(MyProfileActivity.this, ModifyNickActivity.class);
-            intent.putExtra("nickName", tvNick.getText().toString());
+            //intent.putExtra("nickName", tvNick.getText().toString());
             startActivityForResult(intent, REQ_MODIFY_GROUP_NAME);
         });
         rvGender.setOnClickListener(v -> modifySex());
@@ -78,7 +84,7 @@ public class MyProfileActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQ_MODIFY_GROUP_NAME) {
             if (resultCode == RESULT_OK && data != null) {
-                String nickName = data.getStringExtra("nickName");
+                //String nickName = data.getStringExtra("nickName");
                 //更新用户信息
 
             }

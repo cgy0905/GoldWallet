@@ -37,6 +37,10 @@
         <activity android:name=".ui.activity.TradeRecordActivity" />
         <activity android:name=".ui.activity.TradeDetailActivity" />
         <activity android:name=".ui.activity.TransferGoldActivity" />
+        <activity android:name=".ui.activity.TradePwdActivity" />
+        <activity android:name=".ui.activity.TradePwdVerifyActivity" />
+        <activity android:name=".ui.activity.TradePwdSetActivity" />
+        <activity android:name=".ui.activity.MyQrCodeActivity" />
 
     </application>
 

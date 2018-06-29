@@ -28,9 +28,9 @@ public class ModifyNickActivity extends BaseActivity {
 
     @Override
     public void init() {
-        nickName = getIntent().getStringExtra("nickName");
-        etNick.setText(nickName);
-        etNick.setSelection(nickName.length());
+//        nickName = getIntent().getStringExtra("nickName");
+//        etNick.setText(nickName);
+//        etNick.setSelection(nickName.length());
     }
 
     @Override
@@ -52,7 +52,7 @@ public class ModifyNickActivity extends BaseActivity {
                 return;
             }
             Intent intent = new Intent();
-            intent.putExtra("nickName", nickName);
+            //ntent.putExtra("nickName", nickName);
             setResult(RESULT_OK, intent);
         });
 

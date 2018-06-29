@@ -29,7 +29,6 @@
         android:id="@+id/tv_trade_pwd"
         style="@style/OptionItemBg"
         android:drawableEnd="@drawable/arrow_right"
-        android:onClick="onItemClick"
         android:text="@string/trade_password"
         android:textColor="@color/title" />
 

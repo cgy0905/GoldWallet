@@ -10,6 +10,7 @@ import com.enternityfintech.goldcard.MainActivity;
 import com.enternityfintech.goldcard.R;
 import com.enternityfintech.goldcard.ui.activity.HoldActivity;
 import com.enternityfintech.goldcard.ui.activity.TradeRecordActivity;
+import com.enternityfintech.goldcard.ui.activity.TransferGoldActivity;
 import com.enternityfintech.goldcard.ui.base.BaseFragment;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
 
@@ -59,6 +60,7 @@ public class HomeFragment extends BaseFragment {
     public void initListener() {
         rlHoldStandard.setOnClickListener(v -> ((MainActivity) getActivity()).jumpToActivity
                 (HoldActivity.class));
+        llTurnGold.setOnClickListener(v -> ((MainActivity) getActivity()).jumpToActivity(TransferGoldActivity.class));
     }
 
     @OnClick(R.id.ll_record)

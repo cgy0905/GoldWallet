@@ -21,12 +21,11 @@
         android:background="@color/white"
         android:padding="72dp">
         
-        
-        
+
         <ImageView
             android:layout_width="203dp"
             android:layout_height="203dp"
-            android:src="@drawable/icon_scan_code"/>
+            android:src="@mipmap/my_qr_code"/>
 
     </LinearLayout>
 

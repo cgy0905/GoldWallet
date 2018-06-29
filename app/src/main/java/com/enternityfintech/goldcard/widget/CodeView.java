@@ -14,7 +14,7 @@ import com.enternityfintech.goldcard.utils.UIUtils;
 
 /**
  */
-public class CodeView extends View {
+    public class CodeView extends View {
 
     public final static int SHOW_TYPE_WORD = 1;
     public final static int SHOW_TYPE_PASSWORD = 2;
