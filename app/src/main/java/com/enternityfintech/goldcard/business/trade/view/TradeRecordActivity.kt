@@ -1,9 +1,11 @@
 package com.enternityfintech.goldcard.business.trade.view
 
+import android.content.Intent
 import android.os.Bundle
 import com.enternityfintech.goldcard.R
 import com.enternityfintech.goldcard.business.trade.mode.TradeRecordModel
 import com.enternityfintech.goldcard.business.trade.presenter.TradePresenter
+import com.enternityfintech.goldcard.business.trade.view.iv.ITradeRecordView
 import com.enternityfintech.goldcard.ui.base.BaseStatusBarActivity
 import com.enternityfintech.goldcard.widget.recyclerview.RecyclerAdapter
 import com.enternityfintech.goldcard.widget.recyclerview.RecyclerHelper
@@ -19,6 +21,9 @@ class TradeRecordActivity : BaseStatusBarActivity(), ITradeRecordView {
         setContentView(R.layout.activity_trade_record)
         adapter = RecyclerHelper.configRecyclerAdapter(recyclerView)
         adapter.registerViewHolder(TradeRecordModel::class.java, TradeRecordViewHolder::class.java)
+        adapter.registerClickListener { _, _ ->
+            startActivity(Intent(this, TradeDetailActivity::class.java))
+        }
         presenter.onCreate()
     }
 

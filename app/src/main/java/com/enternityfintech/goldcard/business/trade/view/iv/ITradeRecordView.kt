@@ -1,4 +1,4 @@
-package com.enternityfintech.goldcard.business.trade.view
+package com.enternityfintech.goldcard.business.trade.view.iv
 
 import com.enternityfintech.goldcard.app.base.mvp.ILoadView
 import com.enternityfintech.goldcard.business.trade.mode.TradeRecordModel

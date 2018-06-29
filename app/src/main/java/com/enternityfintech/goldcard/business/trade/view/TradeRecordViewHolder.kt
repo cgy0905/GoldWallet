@@ -25,6 +25,7 @@ class TradeRecordViewHolder(itemView: View) : DataViewHolder<TradeRecordModel>(i
             view.tv_weight.text = item.weight
             view.tv_weight.setTextColor(item.color)
             itemView.ll_container.addView(view)
+            registerClickEvent(view.rl_trade_record_item)
         }
     }
 }

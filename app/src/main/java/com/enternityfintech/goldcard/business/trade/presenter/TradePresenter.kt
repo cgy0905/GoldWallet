@@ -5,7 +5,7 @@ import com.enternityfintech.goldcard.R
 import com.enternityfintech.goldcard.app.base.BaseApp
 import com.enternityfintech.goldcard.app.base.mvp.Presenter
 import com.enternityfintech.goldcard.business.trade.mode.TradeRecordModel
-import com.enternityfintech.goldcard.business.trade.view.ITradeRecordView
+import com.enternityfintech.goldcard.business.trade.view.iv.ITradeRecordView
 import com.enternityfintech.goldcard.utils.DateUtil
 import java.util.*
 
