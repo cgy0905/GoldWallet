@@ -7,10 +7,10 @@
     android:orientation="vertical"
     tools:context=".ui.activity.TradeDetailActivity">
 
-    <com.enternityfintech.goldcard.widget.ToolBar
+    <com.enternityfintech.goldcard.widget.TitleView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleText="@string/trade_detail" />
+        app:title="交易详情" />
 
     <LinearLayout
         android:layout_width="match_parent"
