@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:minHeight="?android:attr/actionBarSize"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="@dimen/actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_bg">
 
     <ImageView
-        android:id="@+id/iv_back"
+        android:id="@+id/iv_left"
         android:layout_centerVertical="true"
         android:layout_height="15dp"
         android:layout_marginLeft="10dp"
@@ -22,6 +22,18 @@
         android:layout_width="15dp"
         android:src="@drawable/icon_quit"
         android:visibility="gone" />
+    <TextView
+        android:id="@+id/tv_left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:text="返回"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/tv_title"
@@ -29,17 +41,34 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="@string/app_name"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:maxLines="10"
+        android:gravity="center"/>
 
     <ImageView
-        android:id="@+id/iv_menu"
+        android:id="@+id/iv_right"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_height="38px"
+        android:layout_height="19dp"
         android:layout_marginRight="@dimen/margin_b"
-        android:layout_width="38px"
+        android:layout_width="19dp"
         android:src="@drawable/icon_scan_code"
         android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_b"
+        android:textSize="14sp"
+        android:text="更多"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        />
 
 </RelativeLayout>
 

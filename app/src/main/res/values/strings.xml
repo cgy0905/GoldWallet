@@ -127,4 +127,5 @@
     <string name="gram_500">500克</string>
     <string name="piece_count">共%1$d张</string>
     <string name="gold_card_select">选择要转的黄金卡</string>
+    <string name="mine">我的</string>
 </resources>

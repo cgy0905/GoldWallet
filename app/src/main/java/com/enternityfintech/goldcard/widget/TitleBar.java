@@ -2,17 +2,14 @@ package com.enternityfintech.goldcard.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Parcelable;
-import android.support.v7.widget.TintTypedArray;
-import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
@@ -22,11 +19,34 @@ import com.enternityfintech.goldcard.R;
  * 2018/6/20  9:18
  * 公共的标题栏
  */
-public class TitleBar extends Toolbar {
+public class TitleBar extends RelativeLayout {
 
-    private ImageView ivBack, ivMenu;
-    private TextView tvTitle;
+
+
+    private Boolean isLeftBtnVisible;
+    private int leftResId;
+
+    private Boolean isLeftTvVisible;
+    private String leftTvText;
+    private int leftTvColor;
+
+    private Boolean isRightBtnVisible;
+    private int rightResId;
+
+    private Boolean isRightTvVisible;
+    private String rightTvText;
+    private int rightTvColor;
+
+    private Boolean isTitleVisible;
+    private String titleText;
+    private int titleColor;
+
+    private int backgroundResId;
+
+    private ImageView ivLeft, ivRight;
+    private TextView tvTitle, tvLeftText, tvRightText;
     private View view;
+    private RelativeLayout rlBg;
 
     public TitleBar(Context context) {
         this(context, null);
@@ -43,78 +63,83 @@ public class TitleBar extends Toolbar {
 
         initView();
 
-        setContentInsetsRelative(0,0);
-
         if (attrs != null) {
             //读取attr属性
-            final TintTypedArray ta = TintTypedArray.obtainStyledAttributes(context, attrs, R.styleable.TitleBar, defStyleAttr, 0);
+            final TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.CustomToolBar, defStyleAttr, 0);
 
-            Drawable leftIcon = ta.getDrawable(R.styleable.TitleBar_leftBackground);
-            if (ivBack != null) {
-                setLeftImageView(leftIcon);
+            /**-------------获取左边按钮属性-------------**/
+            leftResId = ta.getResourceId(R.styleable.CustomToolBar_left_btn_src, -1);
+            isLeftBtnVisible = ta.getBoolean(R.styleable.CustomToolBar_left_btn_visible, false);
+
+            /**-------------获取左边文本属性------------*/
+            isLeftTvVisible = ta.getBoolean(R.styleable.CustomToolBar_left_tv_visible, false);
+            leftTvColor = ta.getColor(R.styleable.CustomToolBar_left_tv_color, Color.parseColor("#FFFFFF"));
+            tvLeftText.setTextColor(leftTvColor);
+            if (ta.hasValue(R.styleable.CustomToolBar_left_tv_text)) {
+                leftTvText = ta.getString(R.styleable.CustomToolBar_left_tv_text);
             }
-            Drawable rightIcon = ta.getDrawable(R.styleable.TitleBar_rightBackground);
-            if (ivMenu != null) {
-                setRightImageView(rightIcon);
+            /**-------------获取右边按钮属性------------*/
+            isRightBtnVisible = ta.getBoolean(R.styleable.CustomToolBar_right_btn_visible, false);
+            rightResId = ta.getResourceId(R.styleable.CustomToolBar_right_btn_src, -1);
+            rightTvColor = ta.getColor(R.styleable.CustomToolBar_right_tv_color, Color.parseColor("#FFFFFF"));
+            tvRightText.setTextColor(rightTvColor);
+            /**-------------获取右边文本属性------------*/
+            isRightTvVisible = ta.getBoolean(R.styleable.CustomToolBar_right_tv_visible, false);
+
+            if (ta.hasValue(R.styleable.CustomToolBar_right_tv_text)) {
+                rightTvText = ta.getString(R.styleable.CustomToolBar_right_tv_text);
             }
-            String title = ta.getString(R.styleable.TitleBar_titleText);
-            float titleTextSize = ta.getDimension(R.styleable.TitleBar_titleTextSize, 14);
-            int titleTextColor = ta.getColor(R.styleable.TitleBar_titleTextColor, Color.parseColor("#333333"));
-            if (tvTitle != null) {
-                tvTitle.setText(title);
-                tvTitle.setTextSize(titleTextSize);
-                tvTitle.setTextColor(titleTextColor);
+
+            /**-------------获取标题属性------------*/
+            isTitleVisible = ta.getBoolean(R.styleable.CustomToolBar_title_visible, false);
+            titleColor = ta.getColor(R.styleable.CustomToolBar_title_color, Color.parseColor("#333333"));
+            tvTitle.setTextColor(titleColor);
+            if(ta.hasValue(R.styleable.CustomToolBar_title_text)){
+                titleText = ta.getString(R.styleable.CustomToolBar_title_text);
             }
-            Boolean leftState = ta.getBoolean(R.styleable.TitleBar_leftState, false);
-            Boolean rightState = ta.getBoolean(R.styleable.TitleBar_rightState, false);
-            if (leftState) {
-                //ivBack.setVisibility(leftState == true ? VISIBLE : INVISIBLE);
-                showLeftImageView();
-            }
-            if (rightState) {
-                //ivMenu.setVisibility(rightState == true ? View.VISIBLE : View.INVISIBLE);
-                showRightImageView();
-            }
+
+            /**-------------背景颜色------------*/
+            backgroundResId = ta.getResourceId(R.styleable.CustomToolBar_barBackground, -1);
+
             ta.recycle();
-        }
-    }
 
-    private void showRightImageView() {
-        if (ivMenu != null) {
-            ivMenu.setVisibility(VISIBLE);
-        }
-    }
+            if (isLeftBtnVisible) {
+                ivLeft.setVisibility(VISIBLE);
+            }
+            if (isLeftTvVisible) {
+                tvLeftText.setVisibility(VISIBLE);
+            }
+            if (isRightBtnVisible) {
+                ivRight.setVisibility(VISIBLE);
+            }
 
-    public void showLeftImageView() {
-        if (ivBack != null) {
-            ivBack.setVisibility(VISIBLE);
-        }
-    }
+            if (isRightTvVisible) {
+                tvRightText.setVisibility(VISIBLE);
+            }
 
-    public void setRightImageView(Drawable rightIcon) {
-        if (ivMenu != null) {
-            ivMenu.setBackground(rightIcon);
-        }
-    }
+            if (isTitleVisible) {
+                tvTitle.setVisibility(VISIBLE);
+            }
 
-    public void setLeftImageView(Drawable leftIcon) {
-        if (ivBack != null) {
-            ivBack.setBackground(leftIcon);
-            ivBack.setVisibility(VISIBLE);
+            if (leftResId != -1) {
+                ivLeft.setBackgroundResource(leftResId);
+            }
+            if (rightResId != -1) {
+                ivRight.setBackgroundResource(rightResId);
+            }
         }
-    }
-    public void setRightImageView(int resId) {
-        setRightImageView(getResources().getDrawable(resId));
     }
 
     private void initView() {
         if (view == null) {
-            view = LayoutInflater.from(getContext()).inflate(R.layout.include_titlebar, null);
-            ivBack = findViewById(R.id.iv_back);
+            view = LayoutInflater.from(getContext()).inflate(R.layout.include_titlebar, this, false);
+            ivLeft = findViewById(R.id.iv_back);
             tvTitle = findViewById(R.id.tv_title);
-            ivMenu = findViewById(R.id.iv_menu);
-            LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.CENTER_HORIZONTAL);
-            addView(view, params);
+            tvLeftText = findViewById(R.id.tv_left_text);
+            ivRight = findViewById(R.id.iv_right);
+            tvRightText = findViewById(R.id.tv_right_text);
+            rlBg = findViewById(R.id.rl_bg);
+            addView(view);
         }
 
     }
@@ -136,29 +161,29 @@ public class TitleBar extends Toolbar {
     }
 
     /**
-     * 管理返回按钮
+     * 设置左边按钮
      */
-    public void setBackVisibility(boolean visible) {
-        ivBack.setVisibility(visible ? View.VISIBLE : View.GONE);
+    public void setLeftBtnVisibility(boolean visible) {
+        ivLeft.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
 
     /**
      * 右侧图标
      */
-    public void setRightIconVisibility(boolean visible) {
-        ivMenu.setVisibility(visible ? View.VISIBLE : View.GONE);
+    public void setRightBtnVisibility(boolean visible) {
+        ivRight.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
 
     /*
      * 点击事件
      */
-    public void setOnBackListener(OnClickListener listener) {
-        ivBack.setOnClickListener(listener);
+    public void setOnLeftListener(OnClickListener listener) {
+        ivLeft.setOnClickListener(listener);
     }
 
     public void setOnRightListener(OnClickListener listener) {
-        ivMenu.setOnClickListener(listener);
+        ivRight.setOnClickListener(listener);
     }
 }

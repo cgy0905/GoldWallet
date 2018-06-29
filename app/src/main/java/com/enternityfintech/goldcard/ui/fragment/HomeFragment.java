@@ -1,5 +1,6 @@
 package com.enternityfintech.goldcard.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -8,10 +9,12 @@ import android.widget.TextView;
 import com.enternityfintech.goldcard.MainActivity;
 import com.enternityfintech.goldcard.R;
 import com.enternityfintech.goldcard.ui.activity.HoldActivity;
+import com.enternityfintech.goldcard.ui.activity.TradeRecordActivity;
 import com.enternityfintech.goldcard.ui.base.BaseFragment;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * Created by cgy
@@ -54,6 +57,12 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void initListener() {
-        rlHoldStandard.setOnClickListener(v -> ((MainActivity)getActivity()).jumpToActivity(HoldActivity.class));
+        rlHoldStandard.setOnClickListener(v -> ((MainActivity) getActivity()).jumpToActivity
+                (HoldActivity.class));
+    }
+
+    @OnClick(R.id.ll_record)
+    void toTradeRecordPage() {
+        startActivity(new Intent(getContext(), TradeRecordActivity.class));
     }
 }

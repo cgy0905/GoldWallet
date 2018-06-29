@@ -1,7 +1,6 @@
 package com.enternityfintech.goldcard.utils;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Point;
 import android.os.Build;
 import android.util.DisplayMetrics;
@@ -17,15 +16,12 @@ public class ScreenUtils
     public static int getStatusBarHeight(Context context)
     {
         int result = 0;
-        try
-        {
+        try {
             int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
-            if (resourceId > 0)
-            {
+            if (resourceId > 0) {
                 result = context.getResources().getDimensionPixelSize(resourceId);
             }
-        } catch (Resources.NotFoundException e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return result;
