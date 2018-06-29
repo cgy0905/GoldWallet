@@ -128,4 +128,7 @@
     <string name="piece_count">共%1$d张</string>
     <string name="gold_card_select">选择要转的黄金卡</string>
     <string name="mine">我的</string>
+
+    <string name="load_more">加载更多中…</string>
+    <string name="no_more_data">没有更多数据</string>
 </resources>

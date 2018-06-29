@@ -34,6 +34,7 @@
         <activity android:name=".ui.activity.ModifyLoginPwdActivity" />
         <activity android:name=".ui.activity.ModifyNickActivity" />
         <activity android:name=".ui.activity.LoginActivity" />
+<<<<<<< HEAD
         <activity android:name=".ui.activity.TradeRecordActivity" />
         <activity android:name=".ui.activity.TradeDetailActivity" />
         <activity android:name=".ui.activity.TransferGoldActivity" />
@@ -41,6 +42,11 @@
         <activity android:name=".ui.activity.TradePwdVerifyActivity" />
         <activity android:name=".ui.activity.TradePwdSetActivity" />
         <activity android:name=".ui.activity.MyQrCodeActivity" />
+=======
+        <activity android:name=".business.trade.view.TradeRecordActivity" />
+        <activity android:name=".business.trade.view.TradeDetailActivity" />
+        <activity android:name=".business.trade.view.TransferGoldActivity" />
+>>>>>>> bcda4fd5707e234f661571fee3868f081dd6e346
 
     </application>
 

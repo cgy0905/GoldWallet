@@ -43,6 +43,7 @@ public class AmountView extends LinearLayout implements View.OnClickListener {
         subIv.setOnClickListener(this);
         addIv.setOnClickListener(this);
         subIv.setEnabled(false);
+        addIv.setEnabled(false);
     }
 
     private OnAmountChangeListener listener;
@@ -57,9 +58,11 @@ public class AmountView extends LinearLayout implements View.OnClickListener {
 
     public void setMaxAmount(int maxAmount) {
         this.maxAmount = maxAmount;
-        if (maxAmount == 0) {
+        if (maxAmount <= 0) {
             subIv.setEnabled(false);
             addIv.setEnabled(false);
+        } else {
+            addIv.setEnabled(true);
         }
     }
 

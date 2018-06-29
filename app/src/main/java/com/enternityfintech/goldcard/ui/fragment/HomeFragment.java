@@ -9,8 +9,13 @@ import android.widget.TextView;
 import com.enternityfintech.goldcard.MainActivity;
 import com.enternityfintech.goldcard.R;
 import com.enternityfintech.goldcard.ui.activity.HoldActivity;
+<<<<<<< HEAD
 import com.enternityfintech.goldcard.ui.activity.TradeRecordActivity;
 import com.enternityfintech.goldcard.ui.activity.TransferGoldActivity;
+=======
+import com.enternityfintech.goldcard.business.trade.view.TradeRecordActivity;
+import com.enternityfintech.goldcard.business.trade.view.TransferGoldActivity;
+>>>>>>> bcda4fd5707e234f661571fee3868f081dd6e346
 import com.enternityfintech.goldcard.ui.base.BaseFragment;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
 
@@ -61,6 +66,11 @@ public class HomeFragment extends BaseFragment {
         rlHoldStandard.setOnClickListener(v -> ((MainActivity) getActivity()).jumpToActivity
                 (HoldActivity.class));
         llTurnGold.setOnClickListener(v -> ((MainActivity) getActivity()).jumpToActivity(TransferGoldActivity.class));
+    }
+
+    @OnClick(R.id.ll_turnGold)
+    void toTurnGoldPage(){
+        startActivity(new Intent(getContext(), TransferGoldActivity.class));
     }
 
     @OnClick(R.id.ll_record)

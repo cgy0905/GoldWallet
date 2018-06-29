@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activity.TradeRecordActivity">
+    tools:context=".business.trade.view.TradeRecordActivity">
 
     <com.enternityfintech.goldcard.widget.TitleView
         android:layout_width="match_parent"
