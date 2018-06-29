@@ -9,7 +9,7 @@
     <com.enternityfintech.goldcard.widget.TitleView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleText="@string/account_safe"
+        app:title="账户安全"
         app:titleColor="@color/title"/>
 
     <TextView

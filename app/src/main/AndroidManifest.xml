@@ -34,9 +34,9 @@
         <activity android:name=".ui.activity.ModifyLoginPwdActivity" />
         <activity android:name=".ui.activity.ModifyNickActivity" />
         <activity android:name=".ui.activity.LoginActivity" />
-        <activity android:name=".ui.activity.TradeRecordActivity" />
+        <activity android:name=".business.trade.view.TradeRecordActivity" />
         <activity android:name=".ui.activity.TradeDetailActivity" />
-        <activity android:name=".ui.activity.TransferGoldActivity" />
+        <activity android:name=".business.trade.view.TransferGoldActivity" />
 
     </application>
 
