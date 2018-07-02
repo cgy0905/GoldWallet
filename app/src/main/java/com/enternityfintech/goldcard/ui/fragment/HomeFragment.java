@@ -2,15 +2,14 @@ package com.enternityfintech.goldcard.ui.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.MainActivity;
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.activity.HoldActivity;
 import com.enternityfintech.goldcard.business.trade.view.TradeRecordActivity;
 import com.enternityfintech.goldcard.business.trade.view.TransferGoldActivity;
+import com.enternityfintech.goldcard.ui.activity.HoldActivity;
 import com.enternityfintech.goldcard.ui.base.BaseFragment;
 import com.enternityfintech.goldcard.ui.base.BasePresenter;
 
@@ -29,10 +28,6 @@ public class HomeFragment extends BaseFragment {
     TextView tvCoins;
     @BindView(R.id.tv_amounts)
     TextView tvAmounts;
-    @BindView(R.id.tv_turnGold)
-    LinearLayout llTurnGold;
-    @BindView(R.id.ll_record)
-    LinearLayout llRecord;
     @BindView(R.id.rl_hold_standard)
     RelativeLayout rlHoldStandard;
 
