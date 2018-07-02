@@ -29,7 +29,7 @@ public class HomeFragment extends BaseFragment {
     TextView tvCoins;
     @BindView(R.id.tv_amounts)
     TextView tvAmounts;
-    @BindView(R.id.ll_turnGold)
+    @BindView(R.id.tv_turnGold)
     LinearLayout llTurnGold;
     @BindView(R.id.ll_record)
     LinearLayout llRecord;
@@ -62,12 +62,12 @@ public class HomeFragment extends BaseFragment {
                 (HoldActivity.class));
     }
 
-    @OnClick(R.id.ll_turnGold)
+    @OnClick(R.id.fl_turnGold)
     void toTurnGoldPage(){
         startActivity(new Intent(getContext(), TransferGoldActivity.class));
     }
 
-    @OnClick(R.id.ll_record)
+    @OnClick(R.id.fl_record)
     void toTradeRecordPage() {
         startActivity(new Intent(getContext(), TradeRecordActivity.class));
     }
