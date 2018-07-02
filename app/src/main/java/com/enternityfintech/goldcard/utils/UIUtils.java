@@ -3,13 +3,11 @@ package com.enternityfintech.goldcard.utils;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Paint;
-import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
 import android.widget.Toast;
 
-import com.enternityfintech.goldcard.app.MyApp;
 import com.enternityfintech.goldcard.app.base.BaseApp;
 
 import static com.enternityfintech.goldcard.app.AppConst.TAG;
@@ -112,55 +110,6 @@ public class UIUtils {
      */
     public static String getPackageName() {
         return getContext().getPackageName();
-    }
-
-    /**
-     * 得到主线程Handler
-     *
-     * @return
-     */
-    public static Handler getMainThreadHandler() {
-        return MyApp.getMainHandler();
-    }
-
-    /**
-     * 得到主线程id
-     *
-     * @return
-     */
-    public static long getMainThreadId() {
-        return MyApp.getMainThreadId();
-    }
-
-    /**
-     * 安全的执行一个任务
-     * @param task
-     */
-    public static void postTaskSafely(Runnable task) {
-        int curThreadId = android.os.Process.myTid();
-        //如果当前线程时主线程
-        if (curThreadId == getMainThreadId()) {
-            task.run();
-        } else {
-            //如果当前线程不是主线程
-            getMainThreadHandler().post(task);
-        }
-    }
-
-    /**
-     * 延迟执行任务
-     * @param task
-     */
-    public static void postTaskDelay(Runnable task, int delayMillis) {
-        getMainThreadHandler().postDelayed(task, delayMillis);
-    }
-
-    /**
-     * 移除任务
-     * @param task
-     */
-    public static void removeTask(Runnable task) {
-        getMainThreadHandler().removeCallbacks(task);
     }
 
     /**
