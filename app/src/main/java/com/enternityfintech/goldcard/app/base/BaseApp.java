@@ -5,8 +5,10 @@ import android.support.multidex.MultiDexApplication;
 
 /**
  * Created by cgy
- * 2018/6/14  10:57
+ * 2018/7/3  13:40
  */
+
+
 public class BaseApp extends MultiDexApplication {
 
     //以下属性应用于真个应用程序，合理利用资源，减少资源浪费
@@ -24,4 +26,7 @@ public class BaseApp extends MultiDexApplication {
         return context;
     }
 
+    public static void setContext(Context mContext) {
+        BaseApp.context = mContext;
+    }
 }

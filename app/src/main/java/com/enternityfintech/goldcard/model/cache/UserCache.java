@@ -1,6 +1,6 @@
 package com.enternityfintech.goldcard.model.cache;
 
-import com.enternityfintech.goldcard.app.AppConst;
+import com.enternityfintech.goldcard.utils.AppConst;
 import com.enternityfintech.goldcard.utils.SPUtils;
 import com.enternityfintech.goldcard.utils.UIUtils;
 

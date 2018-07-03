@@ -5,18 +5,14 @@ import android.content.pm.PackageManager;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
+import com.enternityfintech.goldcard.base.BaseActivity;
 
 /**
  * Created by cgy
  * 2018/6/22  11:32
  */
 public class AboutUsActivity extends BaseActivity{
-    @Override
-    protected BasePresenter createPresenter() {
-        return null;
-    }
+
 
     @Override
     protected int provideContentViewId() {

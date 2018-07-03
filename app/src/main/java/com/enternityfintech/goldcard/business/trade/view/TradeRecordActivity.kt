@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.CompoundButton
 import com.enternityfintech.goldcard.R
+import com.enternityfintech.goldcard.base.BaseStatusBarActivity
 import com.enternityfintech.goldcard.business.trade.mode.TradeRecordModel
 import com.enternityfintech.goldcard.business.trade.presenter.TradePresenter
 import com.enternityfintech.goldcard.business.trade.view.iv.ITradeRecordView
-import com.enternityfintech.goldcard.ui.base.BaseStatusBarActivity
 import com.enternityfintech.goldcard.ui.dialog.ToastHelper
 import com.enternityfintech.goldcard.utils.dialog.DatePickerDialog
 import com.enternityfintech.goldcard.utils.dialog.DropDownPopup

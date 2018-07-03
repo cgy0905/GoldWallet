@@ -183,7 +183,38 @@
                 <RelativeLayout
                     android:id="@+id/rl_hold_standard"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_b"
+                    android:layout_marginRight="@dimen/margin_b"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/shape_home_top_corner_bg"
+                    android:orientation="vertical"
+                    android:paddingBottom="23dp"
+                    android:paddingLeft="@dimen/padding_l"
+                    android:paddingRight="@dimen/padding_l"
+                    android:paddingTop="@dimen/margin">
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/rl_possess_standard"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--android:drawableLeft="@drawable/shape_home_line_bg"-->
+                            <!--android:drawablePadding="6dp"-->
+                            <!--android:text="持有规格"-->
+                            <!--android:textSize="@dimen/content" />-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--android:src="@drawable/arrow_right" />-->
+                    <!--</RelativeLayout>-->
 
                     <TextView
                         android:layout_width="wrap_content"

@@ -3,9 +3,8 @@ package com.enternityfintech.goldcard.ui.activity;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
-import com.enternityfintech.goldcard.widget.CodeView;
+import com.enternityfintech.goldcard.base.BaseActivity;
+import com.enternityfintech.goldcard.widget.PasswordInputView;
 import com.enternityfintech.goldcard.widget.TitleView;
 
 import butterknife.BindView;
@@ -20,11 +19,12 @@ public class TradePwdSetActivity extends BaseActivity {
     @BindView(R.id.tv_tip)
     TextView tvTip;
     @BindView(R.id.pwd_view)
-    CodeView pwdView;
+    PasswordInputView pwdView;
+
 
     @Override
-    protected BasePresenter createPresenter() {
-        return null;
+    protected void initView() {
+
     }
 
     @Override
@@ -33,18 +33,5 @@ public class TradePwdSetActivity extends BaseActivity {
     }
 
 
-    @Override
-    public void initListener() {
-        pwdView.setListener(new CodeView.Listener() {
-            @Override
-            public void onValueChanged(String value) {
 
-            }
-
-            @Override
-            public void onComplete(String value) {
-                jumpToActivity(TradePwdSetAgainActivity.class);
-            }
-        });
-    }
 }

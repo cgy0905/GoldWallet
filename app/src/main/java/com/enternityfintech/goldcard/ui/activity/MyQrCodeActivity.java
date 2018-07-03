@@ -1,17 +1,18 @@
 package com.enternityfintech.goldcard.ui.activity;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
+import com.enternityfintech.goldcard.base.BaseActivity;
 
 /**
  * Created by cgy
  * 2018/6/27  17:47
  */
 public class MyQrCodeActivity extends BaseActivity {
+
+
     @Override
-    protected BasePresenter createPresenter() {
-        return null;
+    protected void initView() {
+
     }
 
     @Override

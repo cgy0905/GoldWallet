@@ -4,8 +4,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
+import com.enternityfintech.goldcard.base.BaseActivity;
 
 import butterknife.BindView;
 
@@ -21,9 +20,11 @@ public class SettingsActivity extends BaseActivity {
     @BindView(R.id.tv_hotLine)
     TextView tvHotLine;
 
+
+
     @Override
-    protected BasePresenter createPresenter() {
-        return null;
+    protected void initView() {
+
     }
 
     @Override
@@ -31,8 +32,5 @@ public class SettingsActivity extends BaseActivity {
         return R.layout.activity_settings;
     }
 
-    @Override
-    public void initListener() {
-        tvContactUs.setOnClickListener(v -> jumpToActivity(AboutUsActivity.class));
-    }
+
 }

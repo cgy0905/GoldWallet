@@ -9,10 +9,17 @@ import com.enternityfintech.goldcard.app.base.BaseApp;
  */
 public class MyApp extends BaseApp{
 
+    private static MyApp INSTANCE;
+
+    public static synchronized MyApp getInstance() {
+        return INSTANCE;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
 
+        INSTANCE = this;
         /*==============相关第三方sdk的初始化等操作===============*/
     }
 }

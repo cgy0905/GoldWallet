@@ -33,7 +33,8 @@
         <activity android:name=".ui.activity.HoldActivity" />
         <activity android:name=".ui.activity.ModifyLoginPwdActivity" />
         <activity android:name=".ui.activity.ModifyNickActivity" />
-        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".business.login.view.LoginActivity" />
+
         <activity android:name=".ui.activity.TradePwdActivity" />
         <activity android:name=".ui.activity.TradePwdVerifyActivity" />
         <activity android:name=".ui.activity.TradePwdSetActivity" />

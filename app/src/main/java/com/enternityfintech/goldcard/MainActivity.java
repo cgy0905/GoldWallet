@@ -1,7 +1,6 @@
 package com.enternityfintech.goldcard;
 
 
-import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
@@ -9,10 +8,9 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
-import com.enternityfintech.goldcard.ui.fragment.HomeFragment;
-import com.enternityfintech.goldcard.ui.fragment.MineFragment;
+import com.enternityfintech.goldcard.business.mine.view.MineFragment;
+import com.enternityfintech.goldcard.base.BaseActivity;
+import com.enternityfintech.goldcard.business.main.view.HomeFragment;
 import com.enternityfintech.goldcard.utils.UIUtils;
 
 import butterknife.BindView;
@@ -31,11 +29,6 @@ public class MainActivity extends BaseActivity {
     private HomeFragment homeFragment;
     private MineFragment mineFragment;
 
-
-    @Override
-    protected BasePresenter createPresenter() {
-        return null;
-    }
 
     @Override
     protected int provideContentViewId() {
@@ -80,10 +73,6 @@ public class MainActivity extends BaseActivity {
     private void hideFragment(FragmentTransaction transaction, Fragment fragment) {
         if (fragment != null)
             transaction.hide(fragment);
-    }
-
-    public void replaceFragment(@IdRes int id, Fragment fragment) {
-        getSupportFragmentManager().beginTransaction().replace(id, fragment).commit();
     }
 
     private long exitTime = 0;

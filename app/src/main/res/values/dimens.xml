@@ -58,5 +58,9 @@
     <dimen name="tab_selected_size">30sp</dimen>
     <dimen name="tab_text_size">24sp</dimen>
 
+    <dimen name="pwd_border_width">0.5dp</dimen>
+    <dimen name="pwd_border_radius">5dp</dimen>
+    <dimen name="pwd_width">6dp</dimen>
+
 
 </resources>

@@ -3,8 +3,7 @@ package com.enternityfintech.goldcard.ui.activity;
 import android.widget.Button;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
+import com.enternityfintech.goldcard.base.BaseActivity;
 import com.enternityfintech.goldcard.widget.ClearableEditText;
 import com.enternityfintech.goldcard.widget.StatedImageView;
 
@@ -26,9 +25,11 @@ public class ModifyLoginPwdActivity extends BaseActivity {
     @BindView(R.id.btn_forget)
     Button btnForget;
 
+
+
     @Override
-    protected BasePresenter createPresenter() {
-        return null;
+    protected void initView() {
+
     }
 
     @Override
@@ -37,7 +38,5 @@ public class ModifyLoginPwdActivity extends BaseActivity {
     }
 
 
-    @Override
-    public void initListener() {
-    }
+
 }
