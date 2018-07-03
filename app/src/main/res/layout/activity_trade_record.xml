@@ -21,11 +21,13 @@
         android:orientation="horizontal">
 
         <FrameLayout
+            android:id="@+id/fl_type1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/rb1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -40,11 +42,13 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/fl_type2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/rb2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -58,11 +62,13 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/fl_type3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/rb3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"

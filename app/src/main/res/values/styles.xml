@@ -208,4 +208,9 @@
         <item name="android:textSize">@dimen/content</item>
         <item name="android:textColor">@color/title</item>
     </style>
+
+    <style name="AnimBottom">
+        <item name="android:windowEnterAnimation">@anim/slide_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom_out</item>
+    </style>
 </resources>

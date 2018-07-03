@@ -16,6 +16,7 @@ object RecyclerHelper {
     fun configRecyclerAdapter(recyclerView: RecyclerView): RecyclerAdapter {
         recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
         val adapter = RecyclerAdapter()
+        adapter.registerViewHolder(Empty::class.java, EmptyViewHolder::class.java)
         recyclerView.adapter = adapter
         return adapter
     }

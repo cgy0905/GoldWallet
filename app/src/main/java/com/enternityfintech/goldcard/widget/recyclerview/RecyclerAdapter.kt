@@ -28,8 +28,9 @@ open class RecyclerAdapter : RecyclerView.Adapter<DataViewHolder<Any>>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder<Any> {
 
         val clazz = viewHolder.get(viewType)
-        val layoutId = clazz?.getAnnotation(LayoutId::class.java)
-                ?: throw IllegalArgumentException(clazz?.simpleName + " must be has @LayoutId " + "annotation!")
+                ?: throw IllegalArgumentException("You should call registerViewHolder() first !")
+        val layoutId = clazz.getAnnotation(LayoutId::class.java)
+                ?: throw IllegalArgumentException(clazz.simpleName + " must be has @LayoutId " + "annotation!")
 
         if (inflater == null) {
             inflater = LayoutInflater.from(parent.context.applicationContext)

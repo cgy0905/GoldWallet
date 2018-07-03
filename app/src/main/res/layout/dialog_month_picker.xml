@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_option_white"
+            android:paddingLeft="@dimen/margin_b"
+            android:paddingRight="@dimen/margin_b"
+            android:text="@string/cancel"
+            android:textColor="@color/tab_text_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            tools:text="选择时间"
+            android:textColor="@color/black"
+            android:textSize="@dimen/content_b" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/selector_option_white"
+            android:paddingLeft="@dimen/margin_b"
+            android:paddingRight="@dimen/margin_b"
+            android:text="@string/sure"
+            android:textColor="@color/main_color"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View style="@style/Line.H" />
+
+    <com.enternityfintech.goldcard.widget.WheelView
+        android:id="@+id/wheelView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:itemNumber="4"
+        app:lineColor="@color/divider"
+        app:maskHeight="32dp"
+        app:noEmpty="true"
+        app:normalTextColor="@color/light_gray"
+        app:normalTextSize="16sp"
+        app:selectedTextColor="@color/title"
+        app:selectedTextSize="17sp"
+        app:unitHeight="45dp" />
+
+</LinearLayout>
