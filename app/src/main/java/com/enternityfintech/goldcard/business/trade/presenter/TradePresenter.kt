@@ -20,6 +20,16 @@ class TradePresenter(view: ITradeRecordView) : Presenter<ITradeRecordView>(view)
         view.showRecord(data)
     }
 
+    fun mockPicker(): List<String> {
+        val mock = ArrayList<String>()
+        val random = Random()
+        val size = random.nextInt(3) + 5
+        for (i in 0 until size) {
+            mock.add("mock type $i")
+        }
+        return mock
+    }
+
     private fun mockData(): List<TradeRecordModel> {
         val mock = ArrayList<TradeRecordModel>()
         val random = Random()

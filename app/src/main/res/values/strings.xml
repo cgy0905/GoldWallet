@@ -118,6 +118,7 @@
     <string name="publisher">发行商:%1$s</string>
     <string name="issue">发行时间：%1$s</string>
     <string name="keep_place">保管地：%1$s</string>
+    <string name="all_month">全部月份</string>
 
     <!--转金-->
     <string name="transfer_gold">转金</string>
