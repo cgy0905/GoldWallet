@@ -8,7 +8,11 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.widget.Toast;
 
+
 import static com.enternityfintech.goldcard.utils.AppConst.TAG;
+
+import com.enternityfintech.goldcard.app.base.BaseApp;
+
 import static com.enternityfintech.goldcard.utils.ScreenUtils.getStatusBarHeight;
 
 /**

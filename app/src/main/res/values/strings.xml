@@ -119,6 +119,7 @@
     <string name="issue">发行时间：%1$s</string>
     <string name="keep_place">保管地：%1$s</string>
 
+    <!--转金-->
     <string name="transfer_gold">转金</string>
     <string name="collect_account_input">请填写收金账户</string>
     <string name="collect_account_check">请仔细核对收金账户信息</string>
@@ -129,6 +130,9 @@
     <string name="gold_card_select">选择要转的黄金卡</string>
     <string name="mine">我的</string>
 
+    <!--加载更多-->
     <string name="load_more">加载更多中…</string>
     <string name="no_more_data">没有更多数据</string>
+
+    <string name="qr_scan">扫描二维码</string>
 </resources>

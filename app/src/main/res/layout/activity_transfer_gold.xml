@@ -47,6 +47,7 @@
                 tools:text="112313213412" />
 
             <ImageButton
+                android:id="@+id/ib_scan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/margin_b"
@@ -69,7 +70,6 @@
                 android:paddingEnd="18dp"
                 android:paddingStart="18dp"
                 android:paddingTop="@dimen/margin_b"
-                android:translationZ="100dp"
                 android:visibility="gone"
                 tools:text="张三" />
         </FrameLayout>
@@ -98,5 +98,6 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/selector_button"
         android:text="@string/sure" />
 </LinearLayout>
