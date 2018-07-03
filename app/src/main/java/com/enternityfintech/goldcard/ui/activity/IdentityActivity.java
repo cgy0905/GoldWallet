@@ -1,8 +1,7 @@
 package com.enternityfintech.goldcard.ui.activity;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
+import com.enternityfintech.goldcard.base.BaseActivity;
 
 /**
  * Created by cgy
@@ -10,9 +9,10 @@ import com.enternityfintech.goldcard.ui.base.BasePresenter;
  */
 public class IdentityActivity extends BaseActivity{
 
+
     @Override
-    protected BasePresenter createPresenter() {
-        return null;
+    protected void initView() {
+
     }
 
     @Override

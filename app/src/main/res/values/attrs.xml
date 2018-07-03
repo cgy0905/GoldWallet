@@ -118,20 +118,30 @@
         <attr name="text" format="string" />
     </declare-styleable>
 
-    <declare-styleable name="CodeView">
-        <attr name="length" format="integer" />
-        <attr name="borderColor" format="color" />
-        <attr name="borderWidth" format="dimension" />
-        <attr name="dividerColor" format="color" />
-        <attr name="dividerWidth" format="dimension" />
-        <attr name="code" format="string" />
-        <attr name="codeColor" format="color" />
-        <attr name="pointRadius" format="dimension" />
-        <attr name="textSize" format="dimension" />
-        <attr name="showType" format="enum">
-            <enum name="word" value="1" />
-            <enum name="password" value="2" />
-        </attr>
+    <!--<declare-styleable name="CodeView">-->
+        <!--<attr name="length" format="integer" />-->
+        <!--<attr name="borderColor" format="color" />-->
+        <!--<attr name="borderWidth" format="dimension" />-->
+        <!--<attr name="dividerColor" format="color" />-->
+        <!--<attr name="dividerWidth" format="dimension" />-->
+        <!--<attr name="code" format="string" />-->
+        <!--<attr name="codeColor" format="color" />-->
+        <!--<attr name="pointRadius" format="dimension" />-->
+        <!--<attr name="textSize" format="dimension" />-->
+        <!--<attr name="showType" format="enum">-->
+            <!--<enum name="word" value="1" />-->
+            <!--<enum name="password" value="2" />-->
+        <!--</attr>-->
+    <!--</declare-styleable>-->
+
+    <declare-styleable name="PasswordInputView">
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="borderRadius" format="dimension"/>
+        <attr name="passwordLength" format="integer"/>
+        <attr name="passwordWidth" format="dimension"/>
+        <attr name="passwordColor" format="color"/>
+        <attr name="passwordRadius" format="dimension"/>
     </declare-styleable>
 
 </resources>

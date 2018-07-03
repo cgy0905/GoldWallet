@@ -3,8 +3,6 @@ package com.enternityfintech.goldcard.utils;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.enternityfintech.goldcard.app.AppConst;
-
 import java.util.List;
 
 /**

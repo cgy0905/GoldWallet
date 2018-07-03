@@ -7,9 +7,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
-import com.enternityfintech.goldcard.widget.CodeView;
+import com.enternityfintech.goldcard.base.BaseActivity;
+import com.enternityfintech.goldcard.widget.PasswordInputView;
 
 import butterknife.BindView;
 
@@ -31,25 +30,17 @@ public class TradePwdVerifyActivity extends BaseActivity {
     @BindView(R.id.layout_phone_verify)
     LinearLayout layoutPhoneVerify;
     @BindView(R.id.pwd_view)
-    CodeView pwdView;
+    PasswordInputView pwdView;
     @BindView(R.id.layout_pwd_verify)
     LinearLayout layoutPwdVerify;
 
 
-    @Override
-    protected BasePresenter createPresenter() {
-        return null;
-    }
 
     @Override
     protected int provideContentViewId() {
         return R.layout.activity_trade_pwd_verify;
     }
 
-    @Override
-    public void initListener() {
-        btnSubmit.setOnClickListener(v -> jumpToActivity(TradePwdSetActivity.class));
-    }
 
     @Override
     public void initView() {

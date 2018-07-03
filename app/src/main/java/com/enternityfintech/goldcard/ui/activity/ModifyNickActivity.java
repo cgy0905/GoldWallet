@@ -5,8 +5,7 @@ import android.text.TextUtils;
 import android.widget.Button;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
+import com.enternityfintech.goldcard.base.BaseActivity;
 import com.enternityfintech.goldcard.widget.FilterEditText;
 
 import butterknife.BindView;
@@ -34,9 +33,18 @@ public class ModifyNickActivity extends BaseActivity {
     }
 
     @Override
-    protected BasePresenter createPresenter() {
-        return null;
+    protected void initView() {
+        btnSave.setOnClickListener(v -> {
+            String nickName = etNick.getText().toString().trim();
+            if (TextUtils.isEmpty(nickName)) {
+                return;
+            }
+            Intent intent = new Intent();
+            setResult(RESULT_OK, intent);
+        });
     }
+
+
 
     @Override
     protected int provideContentViewId() {
@@ -44,18 +52,4 @@ public class ModifyNickActivity extends BaseActivity {
     }
 
 
-    @Override
-    public void initListener() {
-        btnSave.setOnClickListener(v -> {
-            String nickName = etNick.getText().toString().trim();
-            if (TextUtils.isEmpty(nickName)) {
-                return;
-            }
-            Intent intent = new Intent();
-            //ntent.putExtra("nickName", nickName);
-            setResult(RESULT_OK, intent);
-        });
-
-
-    }
 }

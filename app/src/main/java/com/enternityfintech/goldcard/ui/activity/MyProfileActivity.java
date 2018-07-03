@@ -2,17 +2,18 @@ package com.enternityfintech.goldcard.ui.activity;
 
 import android.content.Intent;
 import android.support.design.widget.BottomSheetDialog;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
-import com.enternityfintech.goldcard.widget.ImagePicker;
+import com.enternityfintech.goldcard.base.BaseActivity;
+import com.enternityfintech.goldcard.widget.imagepicker.ImagePicker;
 import com.enternityfintech.goldcard.widget.TitleView;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * Created by cgy
@@ -44,10 +45,6 @@ public class MyProfileActivity extends BaseActivity {
     @BindView(R.id.rvGender)
     RelativeLayout rvGender;
 
-    @Override
-    protected BasePresenter createPresenter() {
-        return null;
-    }
 
     @Override
     protected int provideContentViewId() {
@@ -60,21 +57,10 @@ public class MyProfileActivity extends BaseActivity {
         imagePicker.setOutput(300, 300);
     }
 
-    @Override
-    public void initListener() {
-        rvNick.setOnClickListener(v -> {
-            Intent intent = new Intent(MyProfileActivity.this, ModifyNickActivity.class);
-            //intent.putExtra("nickName", tvNick.getText().toString());
-            startActivityForResult(intent, REQ_MODIFY_GROUP_NAME);
-        });
-        rvGender.setOnClickListener(v -> modifySex());
-
-        ivPortrait.setOnClickListener(v -> imagePicker.showPath(REQ_UPDATE_HEAD_PORTRAIT));
-    }
 
 
     private void modifySex() {
-        final BottomSheetDialog sexDialog = new BottomSheetDialog(this,R.style.BottomDialog);
+        final BottomSheetDialog sexDialog = new BottomSheetDialog(this, R.style.BottomDialog);
         sexDialog.setContentView(R.layout.dialog_sex);
         sexDialog.show();
     }
@@ -90,6 +76,26 @@ public class MyProfileActivity extends BaseActivity {
             }
         } else {
             imagePicker.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+
+    @OnClick({R.id.iv_portrait, R.id.rvNick, R.id.rvGender})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.iv_portrait:
+                rvNick.setOnClickListener(v -> {
+                    Intent intent = new Intent(MyProfileActivity.this, ModifyNickActivity.class);
+                    //intent.putExtra("nickName", tvNick.getText().toString());
+                    startActivityForResult(intent, REQ_MODIFY_GROUP_NAME);
+                });
+                break;
+            case R.id.rvNick:
+                rvGender.setOnClickListener(v -> modifySex());
+                break;
+            case R.id.rvGender:
+                ivPortrait.setOnClickListener(v -> imagePicker.showPath(REQ_UPDATE_HEAD_PORTRAIT));
+                break;
         }
     }
 }

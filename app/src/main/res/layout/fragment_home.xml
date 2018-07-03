@@ -186,7 +186,7 @@
                     android:paddingTop="@dimen/margin">
 
                     <RelativeLayout
-                        android:id="@+id/rl_hold_standard"
+                        android:id="@+id/rl_possess_standard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 

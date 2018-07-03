@@ -3,8 +3,7 @@ package com.enternityfintech.goldcard.ui.activity;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
-import com.enternityfintech.goldcard.ui.base.BaseActivity;
-import com.enternityfintech.goldcard.ui.base.BasePresenter;
+import com.enternityfintech.goldcard.base.BaseActivity;
 
 import butterknife.BindView;
 
@@ -18,9 +17,10 @@ public class AccountSafetyActivity extends BaseActivity {
     @BindView(R.id.tv_trade_pwd)
     TextView tvTradePwd;
 
+
     @Override
-    protected BasePresenter createPresenter() {
-        return null;
+    protected void initView() {
+
     }
 
     @Override
@@ -29,9 +29,5 @@ public class AccountSafetyActivity extends BaseActivity {
     }
 
 
-    @Override
-    public void initListener() {
-        tvLoginPwd.setOnClickListener(v -> jumpToActivity(ModifyLoginPwdActivity.class));
-        tvTradePwd.setOnClickListener(v -> jumpToActivity(TradePwdActivity.class));
-    }
+
 }

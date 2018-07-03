@@ -5,7 +5,7 @@ import com.enternityfintech.goldcard.R
 import com.enternityfintech.goldcard.business.trade.mode.TradeDetailModel
 import com.enternityfintech.goldcard.business.trade.presenter.TradeDetailPresenter
 import com.enternityfintech.goldcard.business.trade.view.iv.ITradeDetailView
-import com.enternityfintech.goldcard.ui.base.BaseStatusBarActivity
+import com.enternityfintech.goldcard.base.BaseStatusBarActivity
 import com.enternityfintech.goldcard.widget.recyclerview.RecyclerAdapter
 import com.enternityfintech.goldcard.widget.recyclerview.RecyclerHelper
 import kotlinx.android.synthetic.main.activity_trade_detail.*

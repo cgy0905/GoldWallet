@@ -23,7 +23,7 @@
         android:text="@string/trade_pwd_setting_tip"
         android:textSize="16sp" />
 
-    <com.enternityfintech.goldcard.widget.CodeView
+    <com.enternityfintech.goldcard.widget.PasswordInputView
         android:id="@+id/pwd_view"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -33,11 +33,8 @@
         android:focusable="true"
         app:borderColor="@color/board_gray"
         app:borderWidth="1dp"
-        app:codeColor="@color/black"
-        app:dividerColor="@color/board_gray"
-        app:dividerWidth="1dp"
-        app:length="6"
-        app:pointRadius="4dp"
-        app:showType="password" />
+        app:passwordColor="@color/black"
+        app:passwordLength="6"
+        app:passwordRadius="4dp" />
 
 </LinearLayout>

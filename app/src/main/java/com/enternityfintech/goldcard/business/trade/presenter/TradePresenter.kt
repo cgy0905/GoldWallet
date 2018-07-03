@@ -2,7 +2,7 @@ package com.enternityfintech.goldcard.business.trade.presenter
 
 import android.support.v4.content.ContextCompat
 import com.enternityfintech.goldcard.R
-import com.enternityfintech.goldcard.app.base.BaseApp
+import com.enternityfintech.goldcard.app.MyApp
 import com.enternityfintech.goldcard.app.base.mvp.Presenter
 import com.enternityfintech.goldcard.business.trade.mode.TradeRecordModel
 import com.enternityfintech.goldcard.business.trade.view.iv.ITradeRecordView
@@ -37,9 +37,9 @@ class TradePresenter(view: ITradeRecordView) : Presenter<ITradeRecordView>(view)
                 item.title = "类型"
                 item.weight = "+" + random.nextInt(1000) + "克"
                 if (random.nextBoolean()) {
-                    item.color = ContextCompat.getColor(BaseApp.getContext(), R.color.main_color)
+                    item.color = ContextCompat.getColor(MyApp.getInstance().applicationContext, R.color.main_color)
                 } else {
-                    item.color = ContextCompat.getColor(BaseApp.getContext(), R.color.title)
+                    item.color = ContextCompat.getColor(MyApp.getInstance().applicationContext, R.color.title)
                 }
 
                 items.add(item)

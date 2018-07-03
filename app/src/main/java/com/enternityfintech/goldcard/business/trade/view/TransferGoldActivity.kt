@@ -2,7 +2,7 @@ package com.enternityfintech.goldcard.business.trade.view
 
 import android.os.Bundle
 import com.enternityfintech.goldcard.R
-import com.enternityfintech.goldcard.ui.base.BaseStatusBarActivity
+import com.enternityfintech.goldcard.base.BaseStatusBarActivity
 import kotlinx.android.synthetic.main.activity_transfer_gold.*
 
 class TransferGoldActivity : BaseStatusBarActivity() {
