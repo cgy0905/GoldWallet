@@ -2,13 +2,13 @@ package com.enternityfintech.goldcard.business.login.view;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
 import com.enternityfintech.goldcard.base.BaseFragment;
-import com.enternityfintech.goldcard.business.login.presenter.LoginPresenter;
-import com.enternityfintech.goldcard.business.login.iView.ILoginView;
+import com.enternityfintech.goldcard.business.login.contract.LoginContract;
 import com.enternityfintech.goldcard.widget.ClearableEditText;
 import com.enternityfintech.goldcard.widget.StatedImageView;
 
@@ -18,7 +18,7 @@ import butterknife.BindView;
  * Created by cgy
  * 2018/6/20  14:10
  */
-public class FastLoginFragment extends BaseFragment<ILoginView, LoginPresenter> implements ILoginView {
+public class FastLoginFragment extends BaseFragment implements LoginContract.ILoginView {
     @BindView(R.id.et_phone)
     ClearableEditText etPhone;
     @BindView(R.id.et_verify_code)
@@ -30,10 +30,6 @@ public class FastLoginFragment extends BaseFragment<ILoginView, LoginPresenter> 
     @BindView(R.id.tv_register)
     TextView tvRegister;
 
-    @Override
-    protected LoginPresenter createPresenter() {
-        return new LoginPresenter((LoginActivity)getActivity());
-    }
 
     TextWatcher watcher = new TextWatcher() {
         @Override
@@ -52,17 +48,6 @@ public class FastLoginFragment extends BaseFragment<ILoginView, LoginPresenter> 
         }
     };
 
-    @Override
-    public void initListener() {
-        etPhone.addTextChangedListener(watcher);
-        etVerifyCode.addTextChangedListener(watcher);
-
-        tvVerifyCode.setOnClickListener(v -> {
-            if (tvVerifyCode.isEnabled()) {
-                mPresenter.sendCode();
-            }
-        });
-    }
 
     private boolean canLogin() {
         int codeLength = etVerifyCode.getText().toString().trim().length();
@@ -71,6 +56,16 @@ public class FastLoginFragment extends BaseFragment<ILoginView, LoginPresenter> 
             return true;
         }
         return false;
+    }
+
+    @Override
+    protected void initView(View rootView) {
+
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     @Override

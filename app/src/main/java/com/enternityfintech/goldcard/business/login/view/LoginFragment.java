@@ -9,8 +9,7 @@ import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
 import com.enternityfintech.goldcard.base.BaseFragment;
-import com.enternityfintech.goldcard.business.login.presenter.LoginPresenter;
-import com.enternityfintech.goldcard.business.login.iView.ILoginView;
+import com.enternityfintech.goldcard.business.login.contract.LoginContract;
 import com.enternityfintech.goldcard.widget.EditTextWithDel;
 import com.enternityfintech.goldcard.widget.PaperButton;
 
@@ -20,7 +19,7 @@ import butterknife.BindView;
  * Created by cgy
  * 2018/6/15  10:16
  */
-public class LoginFragment extends BaseFragment implements ILoginView {
+public class LoginFragment extends BaseFragment implements LoginContract.ILoginView {
 
 
     @BindView(R.id.ivPhone)
@@ -68,17 +67,11 @@ public class LoginFragment extends BaseFragment implements ILoginView {
 
     }
 
-    @Override
-    public void initListener() {
-        etPhone.addTextChangedListener(watcher);
-        etPassword.addTextChangedListener(watcher);
-        btLogin.setOnClickListener(v -> doLogin());
-    }
 
     private void doLogin() {
         String phone = etPhone.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
-        mPresenter.login(phone, password);
+        //mPresenter.login(phone, password);
     }
 
     private boolean canLogin() {
@@ -91,10 +84,6 @@ public class LoginFragment extends BaseFragment implements ILoginView {
     }
 
 
-    @Override
-    protected LoginPresenter createPresenter() {
-        return new LoginPresenter((LoginActivity) getActivity());
-    }
 
     @Override
     protected int provideContentViewId() {

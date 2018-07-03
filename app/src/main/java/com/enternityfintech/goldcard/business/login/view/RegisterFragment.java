@@ -3,7 +3,6 @@ package com.enternityfintech.goldcard.business.login.view;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -11,7 +10,6 @@ import android.widget.RelativeLayout;
 import com.enternityfintech.goldcard.R;
 import com.enternityfintech.goldcard.base.BaseFragment;
 import com.enternityfintech.goldcard.business.login.contract.RegisterContract;
-import com.enternityfintech.goldcard.business.login.presenter.RegisterPresenter;
 import com.enternityfintech.goldcard.widget.EditTextWithDel;
 import com.enternityfintech.goldcard.widget.PaperButton;
 
@@ -80,23 +78,6 @@ public class RegisterFragment extends BaseFragment implements RegisterContract.I
 
         }
     };
-
-    @Override
-    public void initListener() {
-        etPhone.addTextChangedListener(watcher);
-        etPassword.addTextChangedListener(watcher);
-        etVerifyCode.addTextChangedListener(watcher);
-
-
-        btnSend.setOnClickListener(v -> {
-            if (btnSend.isEnabled()) {
-                mPresenter.sendCode();
-            }
-        });
-
-        btnRegister.setOnClickListener(v -> mPresenter.register());
-
-    }
 
 
 
