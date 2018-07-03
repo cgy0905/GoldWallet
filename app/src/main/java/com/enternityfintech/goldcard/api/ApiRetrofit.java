@@ -20,7 +20,7 @@ import rx.Observable;
  * Created by cgy
  * 2018/6/14  14:02
  */
-public class ApiRetrofit extends BaseApiRetrofit{
+public class ApiRetrofit extends BaseApiRetrofit {
 
     public MyApi mApi;
     public static ApiRetrofit mInstance;
@@ -51,9 +51,11 @@ public class ApiRetrofit extends BaseApiRetrofit{
         }
         return mInstance;
     }
+
     private RequestBody getRequestBody(Object obj) {
         String route = new Gson().toJson(obj);
-        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), route);
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"),
+                route);
         return body;
     }
 

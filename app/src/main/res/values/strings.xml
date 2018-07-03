@@ -133,4 +133,6 @@
     <!--加载更多-->
     <string name="load_more">加载更多中…</string>
     <string name="no_more_data">没有更多数据</string>
+
+    <string name="qr_scan">扫描二维码</string>
 </resources>

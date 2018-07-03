@@ -47,6 +47,7 @@
                 tools:text="112313213412" />
 
             <ImageButton
+                android:id="@+id/ib_scan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/margin_b"
@@ -97,5 +98,6 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/selector_button"
         android:text="@string/sure" />
 </LinearLayout>
