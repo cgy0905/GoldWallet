@@ -21,19 +21,20 @@
             android:layout_weight="1"
             android:drawablePadding="@dimen/margin_b"
             android:drawableTop="@drawable/icon_maijinbei"
-            android:text="卖金呗"
+            android:text="@string/sell_gold"
             android:gravity="center"
             android:textColor="@color/content"
             android:textSize="13sp" />
 
         <TextView
+            android:id="@+id/tv_repo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawablePadding="@dimen/margin_b"
             android:drawableTop="@drawable/icon_jinhuigou"
             android:gravity="center"
-            android:text="金回购"
+            android:text="@string/gold_buyback"
             android:textColor="@color/content"
             android:textSize="13sp" />
 

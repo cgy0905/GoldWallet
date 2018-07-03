@@ -135,4 +135,6 @@
     <string name="no_more_data">没有更多数据</string>
 
     <string name="qr_scan">扫描二维码</string>
+    <string name="gold_buyback">金回购</string>
+    <string name="sell_gold">卖金呗</string>
 </resources>
