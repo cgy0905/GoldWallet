@@ -2,9 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/background_color">
+
+    <com.enternityfintech.goldcard.widget.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/possess"
+        app:titleColor="@color/title"
+        app:submit="管理"/>
     <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/padding"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"

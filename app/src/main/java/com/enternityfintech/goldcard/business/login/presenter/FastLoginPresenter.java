@@ -13,6 +13,7 @@ import com.enternityfintech.goldcard.utils.UIUtils;
 
 import org.jetbrains.annotations.NotNull;
 
+import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -22,7 +23,9 @@ import rx.schedulers.Schedulers;
  */
 public class LoginPresenter implements LoginContract.ILoginPresenter {
 
-
+    private LoginContract.ILoginView loginView;
+    private Subscription subscription;
+    
     public void login(String phone, String password) {
         if (TextUtils.isEmpty(phone)) {
             UIUtils.showToast(UIUtils.getString(R.string.phone_not_empty));
@@ -59,11 +62,17 @@ public class LoginPresenter implements LoginContract.ILoginPresenter {
 
     @Override
     public void attachView(@NotNull LoginContract.ILoginView view) {
-
+        loginView = view;
     }
+
+
+
 
     @Override
     public void detachView() {
-
+        if (subscription != null && !subscription.isUnsubscribed()) {
+            subscription.unsubscribe();
+        }
+        loginView = null;
     }
 }
