@@ -15,8 +15,8 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.I
 
     @Override
     protected void initView() {
-       registerPresenter = new RegisterPresenter();
-       registerPresenter.attachView(this);
+       registerPresenter = new RegisterPresenter(this);
+
     }
 
     @Override

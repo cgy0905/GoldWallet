@@ -5,8 +5,6 @@ import com.enternityfintech.goldcard.business.login.contract.RegisterContract;
 import com.enternityfintech.goldcard.utils.LogUtils;
 import com.enternityfintech.goldcard.utils.UIUtils;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Timer;
 
 import rx.Subscription;
@@ -20,6 +18,11 @@ public class RegisterPresenter implements RegisterContract.RegisterPresenter {
     int time = 0;
     private Timer timer;
     private Subscription subscription;
+
+    private RegisterContract.IRegisterView registerView;
+    public RegisterPresenter(RegisterContract.IRegisterView registerView) {
+        this.registerView = registerView;
+    }
 
 
 //    public RegisterPresenter(BaseActivity context) {
@@ -126,13 +129,14 @@ public class RegisterPresenter implements RegisterContract.RegisterPresenter {
 
     }
 
+
     @Override
-    public void attachView(@NotNull RegisterContract.IRegisterView view) {
+    public void subscribe() {
 
     }
 
     @Override
-    public void detachView() {
+    public void unSubscribe() {
 
     }
 }

@@ -1,1 +1,1 @@
-include ':app', ':permission', ':scan'
+include ':app', ':permission', ':scan', ':optionitemivew'

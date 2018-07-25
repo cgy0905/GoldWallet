@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/shape_gold_card_detail_bg"
@@ -10,7 +11,10 @@
     <com.enternityfintech.goldcard.widget.TitleView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="交易详情"/>
+        app:title="交易详情" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,189 +23,205 @@
         android:layout_marginLeft="@dimen/margin"
         android:layout_marginRight="@dimen/margin"
         android:layout_marginTop="@dimen/padding_l"
-        android:background="@drawable/detail_bg"
-        android:orientation="vertical"
-        android:paddingLeft="@dimen/margin_large"
-        android:paddingTop="25dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="基本信息"
-            android:textColor="@color/title"
-            android:textSize="15dp" />
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/margin_large"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/margin">
 
             <TextView
-                style="@style/Detail_LeftTextView_Style"
-                android:text="规格" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="基本信息"
+                android:textColor="@color/title"
+                android:textSize="15sp" />
 
-            <TextView
-                style="@style/Detail_RightTextView_Style"
-                android:layout_marginLeft="60dp"
-                android:text="200克" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_large"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="规格"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/content_s" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:textColor="@color/title"
+                    android:textSize="@dimen/content"
+                    tool:text="200克" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/padding_l"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Detail_LeftTextView_Style"
+                    android:text="来源" />
+
+                <TextView
+                    style="@style/Detail_RightTextView_Style"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="60dp"
+                    tool:text="收金" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/padding_l"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Detail_LeftTextView_Style"
+                    android:text="转账账户" />
+
+                <TextView
+                    style="@style/Detail_RightTextView_Style"
+                    android:layout_marginLeft="35dp"
+                    tool:text="158xxxx1234" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/padding_l"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Detail_LeftTextView_Style"
+                    android:text="持有时间" />
+
+                <TextView
+                    style="@style/Detail_RightTextView_Style"
+                    android:layout_marginLeft="35dp"
+                    tool:text="2018-5-13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/padding_l"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Detail_LeftTextView_Style"
+                    android:text="交易平台" />
+
+                <TextView
+                    style="@style/Detail_RightTextView_Style"
+                    android:layout_marginLeft="35dp"
+                    tool:text="黄金卡" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Detail_LeftTextView_Style"
+                    android:text="黄金卡" />
+
+                <TextView
+                    style="@style/Detail_RightTextView_Style"
+                    android:layout_marginLeft="45dp"
+                    tool:text="000000000000000000000" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/padding_l"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Detail_LeftTextView_Style"
+                    android:text="发行商" />
+
+                <TextView
+                    style="@style/Detail_RightTextView_Style"
+                    android:layout_marginLeft="45dp"
+                    tool:text="xxxxxxxxxx" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/padding_l"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Detail_LeftTextView_Style"
+                    android:text="存管地" />
+
+                <TextView
+                    style="@style/Detail_RightTextView_Style"
+                    android:layout_marginLeft="45dp"
+                    tool:text="xxxxxxxxx" />
+            </LinearLayout>
+
         </LinearLayout>
+
+        <com.enternityfintech.goldcard.widget.CouponView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:port_shape_color="@color/transparent"
+            app:port_shape_height="10dp"
+            app:divider_line_color="@color/line"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/padding"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/margin">
 
             <TextView
-                style="@style/Detail_LeftTextView_Style"
-                android:text="来源" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="黄金卡二维码"
+                android:textColor="@color/title"
+                android:textSize="15sp" />
 
-            <TextView
-                style="@style/Detail_RightTextView_Style"
-                android:layout_marginLeft="60dp"
-                android:text="收金" />
+            <ImageView
+                android:layout_width="139dp"
+                android:layout_height="139dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="35dp" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/padding"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/Detail_LeftTextView_Style"
-                android:text="转账账户" />
-
-            <TextView
-                style="@style/Detail_RightTextView_Style"
-                android:layout_marginLeft="38dp"
-                android:text="158xxxx1234" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/padding"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/Detail_LeftTextView_Style"
-                android:text="持有时间" />
-
-            <TextView
-                style="@style/Detail_RightTextView_Style"
-                android:layout_marginLeft="38dp"
-                android:text="2018-5-13" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/padding"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/Detail_LeftTextView_Style"
-                android:text="交易平台" />
-
-            <TextView
-                style="@style/Detail_RightTextView_Style"
-                android:layout_marginLeft="38dp"
-                android:text="黄金卡" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/padding"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/Detail_LeftTextView_Style"
-                android:text="黄金卡" />
-
-            <TextView
-                style="@style/Detail_RightTextView_Style"
-                android:layout_marginLeft="48dp"
-                android:text="000000000000000000000" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/padding"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/Detail_LeftTextView_Style"
-                android:text="发行商" />
-
-            <TextView
-                style="@style/Detail_RightTextView_Style"
-                android:layout_marginLeft="48dp"
-                android:text="xxxxxxxxxx" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/padding"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/Detail_LeftTextView_Style"
-                android:text="存管地" />
-
-            <TextView
-                style="@style/Detail_RightTextView_Style"
-                android:layout_marginLeft="48dp"
-                android:text="xxxxxxxxx" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="@dimen/margin"
-            android:layout_marginRight="@dimen/margin_large"
-            android:layout_marginTop="22dp"
-            android:background="@drawable/shape_dashed_line" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_large"
-            android:text="黄金卡二维码"
-            android:textColor="@color/title"
-            android:textSize="15sp" />
-
-
-        <ImageView
-            android:layout_width="139dp"
-            android:layout_height="139dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="50dp"
-            android:layout_marginTop="35dp" />
     </LinearLayout>
 
+    </ScrollView>
 
 </LinearLayout>

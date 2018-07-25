@@ -1,2 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string-array name="card_id">
+        <item>555612345678</item>
+        <item>232312345678</item>
+        <item>333312345678</item>
+        <item>777712345678</item>
+        <item>666612345678</item>
+        <item>444412345678</item>
+        <item>888812345678</item>
+        <item>999912345678</item>
+        <item>102012345678</item>
+        <item>332512345678</item>
+        <item>785712345678</item>
+    </string-array>
+
+    <string-array name="business_name">
+        <item>马路边边串串</item>
+        <item>江小白串串</item>
+        <item>川西坝子火锅</item>
+        <item>赵老二火锅</item>
+        <item>小龙坎火锅</item>
+        <item>大龍焱火锅</item>
+        <item>满江红串串</item>
+        <item>珍贵小龙虾</item>
+        <item>珍贵小龙虾</item>
+        <item>大龍焱火锅</item>
+        <item>川西坝子火锅</item>
+
+    </string-array>
+
+    <string-array name="vault_name">
+        <item>成都银行三方金库</item>
+        <item>兰州银行三方金库</item>
+        <item>北京银行三方金库</item>
+        <item>上海银行三方金库</item>
+        <item>天津银行三方金库</item>
+        <item>广州银行三方金库</item>
+        <item>成都银行三方金库</item>
+        <item>苏州银行三方金库</item>
+        <item>苏州银行三方金库</item>
+        <item>深圳银行三方金库</item>
+        <item>广州银行三方金库</item>
+    </string-array>
+
+
+
+</resources>

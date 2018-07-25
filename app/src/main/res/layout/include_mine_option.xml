@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/padding_l"
     android:layout_gravity="center_horizontal"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:layout_marginTop="@dimen/margin_b"
+    android:background="@color/white"
+    android:orientation="vertical">
 
 
     <TextView
         android:id="@+id/tv_notification"
         style="@style/OptionItem"
-        android:layout_marginTop="@dimen/padding_l"
         android:drawableEnd="@drawable/arrow_right"
         android:drawableStart="@drawable/icon_notification"
         android:text="@string/message_notification"
         android:textColor="@color/title" />
 
     <View
-        style="@style/Line.H"
-        android:layout_marginStart="@dimen/margin_b" />
+        style="@style/Line"
+        android:layout_marginStart="@dimen/bottom_line_margin_right" />
 
     <TextView
         android:id="@+id/tv_auth"
@@ -29,6 +28,9 @@
         android:drawableStart="@drawable/icon_authentication"
         android:text="@string/authentication"
         android:textColor="@color/title" />
+    <View
+        style="@style/Line"
+        android:layout_marginStart="@dimen/bottom_line_margin_right" />
 
 
     <TextView
@@ -38,6 +40,9 @@
         android:drawableStart="@drawable/icon_account"
         android:text="@string/safety_account"
         android:textColor="@color/title" />
+    <View
+        style="@style/Line"
+        android:layout_marginStart="@dimen/bottom_line_margin_right" />
 
     <TextView
         android:id="@+id/tv_settings"

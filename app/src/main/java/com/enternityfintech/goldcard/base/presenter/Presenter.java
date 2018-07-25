@@ -1,4 +1,6 @@
-package com.enternityfintech.goldcard.base;
+package com.enternityfintech.goldcard.base.presenter;
+
+import com.enternityfintech.goldcard.base.BaseView;
 
 import org.jetbrains.annotations.NotNull;
 

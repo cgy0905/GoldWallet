@@ -175,7 +175,6 @@
                 android:layout_marginTop="17dp"
                 android:background="@drawable/shape_home_top_corner_bg"
                 android:orientation="vertical"
-                android:paddingBottom="23dp"
                 android:paddingLeft="@dimen/padding_l"
                 android:paddingRight="@dimen/padding_l"
                 android:paddingTop="@dimen/margin">
@@ -184,12 +183,9 @@
                     android:id="@+id/rl_hold_standard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/margin_b"
-                    android:layout_marginRight="@dimen/margin_b"
-                    android:layout_marginTop="17dp"
                     android:background="@drawable/shape_home_top_corner_bg"
                     android:orientation="vertical"
-                    android:paddingBottom="23dp"
+                    android:paddingBottom="@dimen/padding_l"
                     android:paddingLeft="@dimen/padding_l"
                     android:paddingRight="@dimen/padding_l"
                     android:paddingTop="@dimen/margin">

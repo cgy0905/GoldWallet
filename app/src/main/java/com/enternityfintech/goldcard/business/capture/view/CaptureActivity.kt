@@ -5,8 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import com.enternityfintech.goldcard.R
 import com.enternityfintech.goldcard.app.base.mvp.ILoadViewImpl
+import com.enternityfintech.goldcard.base.BaseStatusBarActivity
 import com.enternityfintech.goldcard.business.capture.presenter.CapturePresenter
-import com.enternityfintech.goldcard.ui.base.BaseStatusBarActivity
 import kotlinx.android.synthetic.main.activity_capture.*
 
 /**

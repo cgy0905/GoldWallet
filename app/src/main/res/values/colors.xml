@@ -30,11 +30,13 @@
     <color name="content">#666666</color>
 
     <!-- 灰色 -->
+    <color name="gray">#D9D9D9</color>
     <color name="rb_select">#eeede8</color>
     <color name="title">#333333</color>
     <color name="light_gray">#999999</color>
     <color name="dark_gray">#666666</color>
     <color name="board_gray">#a3a3a3</color>
+    <style name="line_color">#eeeeee</style>
     <color name="bg_Gray">#CCCCCC</color>
     <color name="header_Gray">#515151</color>
     <color name="header_litteGray">#969696</color>

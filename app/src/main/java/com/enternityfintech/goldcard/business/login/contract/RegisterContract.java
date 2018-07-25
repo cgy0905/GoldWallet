@@ -15,7 +15,7 @@ public interface RegisterContract {
     }
 
 
-    interface RegisterPresenter extends BasePresenter<IRegisterView> {
+    interface RegisterPresenter extends BasePresenter {
         void register(String verifyCode, String phone, String password);
     }
 }

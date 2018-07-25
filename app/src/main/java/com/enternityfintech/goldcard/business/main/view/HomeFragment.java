@@ -3,18 +3,15 @@ package com.enternityfintech.goldcard.business.main.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.enternityfintech.goldcard.R;
-
 import com.enternityfintech.goldcard.base.BaseFragment;
 import com.enternityfintech.goldcard.business.trade.view.TradeRecordActivity;
 import com.enternityfintech.goldcard.business.trade.view.TransferGoldActivity;
-import com.enternityfintech.goldcard.ui.activity.HoldActivity;
-
-
+import com.enternityfintech.goldcard.ui.activity.PossessActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -31,12 +28,11 @@ public class HomeFragment extends BaseFragment {
     TextView tvCoins;
     @BindView(R.id.tv_amounts)
     TextView tvAmounts;
-    @BindView(R.id.ll_turnGold)
-    LinearLayout llTurnGold;
-    @BindView(R.id.ll_record)
-    LinearLayout llRecord;
-    @BindView(R.id.rl_possess_standard)
-    RelativeLayout rlPossessStandard;
+    @BindView(R.id.fl_turnGold)
+    FrameLayout flTurnGold;
+    @BindView(R.id.fl_record)
+    FrameLayout flRecord;
+
     @BindView(R.id.rl_hold_standard)
     RelativeLayout rlHoldStandard;
 
@@ -78,9 +74,9 @@ public class HomeFragment extends BaseFragment {
         startActivity(new Intent(getContext(), TradeRecordActivity.class));
     }
 
-    @OnClick(R.id.rl_possess_standard)
+    @OnClick(R.id.rl_hold_standard)
     void toPossessPage() {
-        startActivity(new Intent(getContext(), HoldActivity.class));
+        startActivity(new Intent(getContext(), PossessActivity.class));
     }
 
 }

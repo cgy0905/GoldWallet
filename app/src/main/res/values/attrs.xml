@@ -161,4 +161,15 @@
         <attr name="isEnable" format="boolean" />
     </declare-styleable>
 
+
+    <declare-styleable name="CouponView">
+        <attr name="divider_line_color" format="color" />
+        <attr name="port_shape_color" format="color" />
+        <attr name="port_shape_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CouponView2">
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+
 </resources>

@@ -17,7 +17,6 @@ import com.enternityfintech.goldcard.ui.activity.SettingsActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
@@ -42,7 +41,6 @@ public class MineFragment extends BaseFragment {
     TextView tvAccount;
     @BindView(R.id.tv_settings)
     TextView tvSettings;
-    Unbinder unbinder;
 
     public static MineFragment newInstance() {
 
@@ -70,11 +68,7 @@ public class MineFragment extends BaseFragment {
     }
 
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
+
 
     @OnClick({R.id.iv_portrait, R.id.tv_notification, R.id.tv_auth, R.id.tv_account, R.id.tv_settings})
     public void onViewClicked(View view) {

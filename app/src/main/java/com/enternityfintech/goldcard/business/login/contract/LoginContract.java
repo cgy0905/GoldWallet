@@ -13,7 +13,7 @@ public interface LoginContract {
         void loginSuccess();
     }
 
-    interface ILoginPresenter extends BasePresenter<ILoginView> {
+    interface ILoginPresenter extends BasePresenter {
         void login(String username, String password);
     }
 }

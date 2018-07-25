@@ -19,20 +19,12 @@ public abstract class BaseFragment extends Fragment{
 
     Unbinder unbinder;
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        init();
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //子类不再需要设置布局ID,也不再需要使用ButterKnife.bind()
         if (provideContentViewId() != 0) {
-            View rootView = inflater.inflate(provideContentViewId(), container, false);
-            initView(rootView);
-            return rootView;
+            return inflater.inflate(provideContentViewId(), container, false);
 
         } else {
             return super.onCreateView(inflater, container, savedInstanceState);
@@ -42,6 +34,7 @@ public abstract class BaseFragment extends Fragment{
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         unbinder = ButterKnife.bind(this, view);
+        initView(view);
         super.onViewCreated(view, savedInstanceState);
     }
 
@@ -51,18 +44,15 @@ public abstract class BaseFragment extends Fragment{
         initData();
     }
 
+
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
         unbinder.unbind();
     }
 
 
-    public void init() {
-
-    }
-
-    protected abstract void initView(View rootView);
+    protected abstract void initView(View view);
 
 
     protected abstract void initData();

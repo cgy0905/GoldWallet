@@ -26,7 +26,7 @@
         app:clearIconDrawable="@drawable/btn_cancel"
         app:clearIconGravity="right|center_vertical" />
 
-    <EditText
+    <com.enternityfintech.goldcard.widget.ClearableEditText
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,9 @@
         android:maxLength="16"
         android:paddingBottom="@dimen/margin_b"
         android:paddingLeft="@dimen/padding_s"
-        android:paddingTop="@dimen/margin_b" />
+        android:paddingTop="@dimen/margin_b"
+        app:clearIconDrawable="@drawable/btn_cancel"
+        app:clearIconGravity="right|center_vertical"/>
 
 
     <com.enternityfintech.goldcard.widget.StatedImageView

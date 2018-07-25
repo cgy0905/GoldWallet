@@ -15,6 +15,7 @@ public class GoldCardDetailActivity extends BaseActivity{
 
     }
 
+
     @Override
     protected int provideContentViewId() {
         return R.layout.activity_gold_card_detail;

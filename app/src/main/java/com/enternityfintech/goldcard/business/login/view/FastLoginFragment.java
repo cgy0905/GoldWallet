@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.enternityfintech.goldcard.R;
 import com.enternityfintech.goldcard.base.BaseFragment;
 import com.enternityfintech.goldcard.business.login.contract.LoginContract;
+import com.enternityfintech.goldcard.business.login.presenter.FastLoginPresenter;
 import com.enternityfintech.goldcard.widget.ClearableEditText;
 import com.enternityfintech.goldcard.widget.StatedImageView;
 
@@ -47,6 +48,7 @@ public class FastLoginFragment extends BaseFragment implements LoginContract.ILo
 
         }
     };
+    private FastLoginPresenter fastLoginPresenter;
 
 
     private boolean canLogin() {
@@ -60,11 +62,19 @@ public class FastLoginFragment extends BaseFragment implements LoginContract.ILo
 
     @Override
     protected void initView(View rootView) {
+        fastLoginPresenter = new FastLoginPresenter(this);
+
 
     }
 
     @Override
     protected void initData() {
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
 
     }
 

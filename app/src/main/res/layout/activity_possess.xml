@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         app:title="@string/possess"
         app:titleColor="@color/title"
-        app:submit="管理"/>
+        app:submit="转金"/>
     <android.support.v7.widget.RecyclerView
         android:layout_marginTop="@dimen/padding"
         android:id="@+id/recyclerView"

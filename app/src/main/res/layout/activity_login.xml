@@ -12,7 +12,7 @@
         android:id="@+id/titleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:backDrawable="@drawable/icon_back"
+        app:backDrawable="@drawable/icon_quit"
         app:isImmersion="true" />
 
     <com.androidkun.xtablayout.XTabLayout
